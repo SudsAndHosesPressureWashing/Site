@@ -3,26 +3,8 @@
 	import ServicesMarker from '../components/ServicesMarker.svelte';
 	import { each } from 'svelte/internal';
 	export let data: PageData;
-    console.log(data)
-    let testservices = [{
-        name: "Roofs",
-        description: "Your roof is a huge part of your home's curb appeal, and it is critical for the function to keep it clean. We use a softwashing technique to break up years of filth to bring your roof back to near new condition.",
-        top: "200px",
-        left: "25%",
-        slug: "/services/driveways"
-    },
-    {
-        name: "Driveways",
-        description: "A clean driveway helps drive up your curb appear, and keeps the concrete in better shape over time.",
-        top: "550px",
-        left: "65%",
-        slug: "/services/roofs"
-    }
-]
-
-
-    
 </script>
+
 <style>
 	:root {
         background-image: var(--bg-image);
