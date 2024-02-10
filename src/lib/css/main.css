@@ -33,6 +33,8 @@ main {
 }
 
 :root {
+  --primary: #d81b60;
+  --primary-hover: #e91e63;
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
