@@ -4,6 +4,11 @@
     export let companyData;
 </script>
 <style>
+
+    * {
+        margin: 0;
+    }
+
     .open {
         rotate: 90deg;
         text-align: center;
@@ -12,6 +17,7 @@
         display: none;
         font-size: 2rem;
     }
+
     @media (max-width: 640px) {
         header {
             flex-direction: column;
@@ -28,21 +34,17 @@
 	}
 
 	
-    * {
-        margin: 0;
-    }
+
     .nav-container {
         
         display: flex;
         justify-content: space-evenly;
         /* flex-wrap: wrap; */
         top: 0;
-        width: 100vw;
+        width: 100%;
         margin-inline: auto;
-
-        
-
     }
+
     header {
         position: sticky;
         top: 0;
@@ -51,6 +53,7 @@
         backdrop-filter: var(--backdrop-filter);
         z-index: 1000;
     }
+
     img {
         margin-block: auto;
     }

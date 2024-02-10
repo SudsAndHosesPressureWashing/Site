@@ -1,7 +1,7 @@
 :root {
-  --bg-image: url("$lib/images/bgimage.jpeg");
+  --bg-image: url("$lib/images/bgimage.webp");
+  background-image: var(--bg-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
-
-/* * {
-  border: 1px red solid;
-} */

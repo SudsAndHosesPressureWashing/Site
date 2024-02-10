@@ -6,13 +6,7 @@
 </script>
 
 <style>
-	:root {
-        background-image: var(--bg-image);
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        
-    }
+
     section {
         margin: 0;
         margin-left: auto;
@@ -43,7 +37,14 @@
         animation-timeline: view();
         animation-range-start: contain -180px;
         animation-range-end: contain; /*75vh;*/
+        
     }
+    
+    .test {
+        --test: calc(100vw / 100vh);
+        width: var(--test);
+    }
+
     .services > h2 {
         color: white;
         position: fixed;
@@ -71,6 +72,8 @@
         color: white;
     }
 
+
+
 </style>
 
 
@@ -85,3 +88,4 @@
         <ServicesMarker service={service}/>
     {/each}
 </section>
+<section class="test">test</section>

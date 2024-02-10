@@ -3,11 +3,10 @@ import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
 
 export const load = (async () => {
-	const companies = await getCompany();
+	// const companies = await getCompany();
 	const services = await getServices();
-	if (companies) {
+	if (services) {
 		return {
-			company: companies[0],
 			services: services
 		}
 	}

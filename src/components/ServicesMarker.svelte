@@ -30,31 +30,26 @@
     p {
         display: var(--show);
     }
-    /* h3::before {
-        content: '';
-        display: inline-block;
-        width: 30px;
-        height: 30px;
-        -moz-border-radius: 15px;
-        -webkit-border-radius: 15px;
-        border-radius: 15px;
-        background-color: var(--primary);
-    } */
+
     h3 {
         vertical-align: center;
         
     }
+
     a {
         color: white;
     }
+
     a:hover {
         color: white;
     }
 
 </style>
-<a href="{service.serviceSlug}">
-    <div class="marker" style="left: {service.left}; top: {service.top};" on:mouseover={handleHide} on:keydown={handleHide}>
-        <h3 >{ service.name }</h3>
-        <p>{ service.shortDescription}</p>
-    </div>
-</a>
+{#if service.top!=="undefined"}
+    <a href="{service.serviceSlug}">
+        <div class="marker" style="left: {service.left}; top: {service.top};" on:mouseover={handleHide} on:keydown={handleHide}>
+            <h3 >{ service.name }</h3>
+            <p>{ service.shortDescription}</p>
+        </div>
+    </a>
+{/if}
