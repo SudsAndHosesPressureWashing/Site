@@ -1,0 +1,105 @@
+<script lang="ts">
+	import type { PageData } from './$types';
+	import ServicesMarker from '../components/ServicesMarker.svelte';
+	import { each } from 'svelte/internal';
+	export let data: PageData;
+    console.log(data)
+    let testservices = [{
+        name: "Roofs",
+        description: "Your roof is a huge part of your home's curb appeal, and it is critical for the function to keep it clean. We use a softwashing technique to break up years of filth to bring your roof back to near new condition.",
+        top: "200px",
+        left: "25%",
+        slug: "/services/driveways"
+    },
+    {
+        name: "Driveways",
+        description: "A clean driveway helps drive up your curb appear, and keeps the concrete in better shape over time.",
+        top: "550px",
+        left: "65%",
+        slug: "/services/roofs"
+    }
+]
+
+
+    
+</script>
+<style>
+	:root {
+        background-image: var(--bg-image);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        
+    }
+    section {
+        margin: 0;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 2rem;
+        /* backdrop-filter: var(--backdrop-filter);
+        background-color: var(--bg-color); */
+        
+    }
+    .intro {
+        margin-top: calc(5vw);
+        backdrop-filter: var(--backdrop-filter);
+        background-color: var(--bg-color);
+        box-shadow: 60px 16px color-mix(in srgb, var(--primary-hover) 70%, transparent);
+    }
+
+    .main-title {
+        text-align: center;
+    }
+
+    .services {
+        height: calc(110vh);
+        /* margin-top: 200px; */
+        border-radius: 20px;
+        opacity: 0;
+        animation: fade-in linear forwards;
+        
+        animation-timeline: view();
+        animation-range-start: contain -180px;
+        animation-range-end: contain; /*75vh;*/
+    }
+    .services > h2 {
+        color: white;
+        position: fixed;
+        top: 50vh;
+        left: 35vw;
+        text-align: center;
+        backdrop-filter: var(--backdrop-filter);
+        background-color: var(--bg-color);
+        box-shadow: 60px 16px color-mix(in srgb, var(--primary-hover) 70%, transparent);
+    }
+
+    @keyframes fade-in {
+        /* from {opacity: 0;} */
+        20% {opacity: 1;}
+        70% {opacity: 1;}
+        100% {opacity: 0;}
+    }
+
+    .down {
+        margin: 0;
+        padding: 0;
+        transform: rotate(180deg);
+        text-align: center;
+        font-size: 4rem;
+        color: white;
+    }
+
+</style>
+
+
+<section class="intro">
+	<h1 class="main-title">Welcome to {data.company.name}</h1>
+	<p>{data.company.excerpt}</p>
+</section>
+<!-- <section class="down">^</section> -->
+<section class="services">
+    <h2>Some of Our Services</h2>
+    {#each data.services as service}
+        <ServicesMarker service={service}/>
+    {/each}
+</section>

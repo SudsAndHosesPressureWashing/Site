@@ -1,0 +1,48 @@
+main {
+    max-width: 1000px;
+    margin-inline: auto;
+    min-height: 100vh;
+}
+
+
+[data-theme="light"],
+:root:not([data-theme="dark"]) {
+  --primary: #000;
+  --primary-focus: rgba(216, 27, 96, 0.125);
+  --primary-inverse: #FFF;
+  --nav-background: rgb(245, 245, 245);
+  --green: rgb(74, 165, 123);
+}
+
+@media only screen and (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --primary: #fff;
+    --primary-hover: #D62F3E;
+    --primary-focus: rgba(216, 27, 96, 0.25);
+    --primary-inverse: #000;
+    --nav-background: #11191f;
+    --green: green;
+  }
+}
+
+[data-theme="dark"] {
+  --primary: #d81b60;
+  --primary-hover: #e91e63;
+  --primary-focus: rgba(216, 27, 96, 0.25);
+  --primary-inverse: #FFF;
+}
+
+:root {
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --switch-color: var(--primary-inverse);
+  --switch-checked-background-color: var(--primary);
+  --bg-image: url("$lib/images/bgimage.jpeg");
+  --backdrop-filter: blur(10px);         
+  --bg-color: rgba(50,50,50,0.8);
+  
+}
+
+/* * {
+  border: 1px red solid;
+} */
