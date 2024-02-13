@@ -18,7 +18,7 @@
         font-size: 2rem;
     }
 
-    @media (max-width: 640px) {
+    @media (max-width: 680px) {
         header {
             flex-direction: column;
             --show-nav: none;

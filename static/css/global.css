@@ -8,6 +8,7 @@ main {
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
   --primary: #000;
+  --primary-pico: #D62F3E;
   --primary-focus: rgba(216, 27, 96, 0.125);
   --primary-inverse: #FFF;
   --nav-background: rgb(245, 245, 245);
@@ -18,6 +19,7 @@ main {
   :root:not([data-theme="light"]) {
     --primary: #fff;
     --primary-hover: #D62F3E;
+    --primary-pico: #D62F3E;
     --primary-focus: rgba(216, 27, 96, 0.25);
     --primary-inverse: #000;
     --nav-background: #11191f;
@@ -28,6 +30,7 @@ main {
 [data-theme="dark"] {
   --primary: #d81b60;
   --primary-hover: #e91e63;
+  --primary-pico: #D62F3E;
   --primary-focus: rgba(216, 27, 96, 0.25);
   --primary-inverse: #FFF;
 }
@@ -42,6 +45,7 @@ main {
 
   --backdrop-filter: blur(10px);         
   --bg-color: rgba(50,50,50,0.8);
+  --mobile-break: 640px;
   
 }
 

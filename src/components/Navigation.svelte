@@ -1,5 +1,5 @@
 <script>
-    export let hideClass
+    export let open;
 </script>
 <style>
     * {
@@ -35,7 +35,6 @@
         box-shadow: 0.35rem 0.35rem color-mix(in srgb, var(--primary-hover) 70%, transparent);
     }
     nav {
-        display: flexbox;
         display: var(--show-nav);
     }
 
@@ -44,6 +43,7 @@
     }
 
 </style>
+
 <div class="nav-show">
     <nav>
         <ul>

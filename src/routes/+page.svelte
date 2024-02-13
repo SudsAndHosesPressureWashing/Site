@@ -39,11 +39,6 @@
         animation-range-end: contain; /*75vh;*/
         
     }
-    
-    .test {
-        --test: calc(100vw / 100vh);
-        width: var(--test);
-    }
 
     .services > h2 {
         color: white;
@@ -55,6 +50,33 @@
         background-color: var(--bg-color);
         box-shadow: 60px 16px color-mix(in srgb, var(--primary-hover) 70%, transparent);
     }
+
+    @media (max-width: 680px) {
+        .services {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            animation: none;
+            opacity: 1;
+            height: auto;
+        }
+
+        .services > h2 {
+            position: inherit;
+            width: 100%;
+        }
+
+	}
+
+    .test {
+        --test: calc(100vw / 100vh);
+        width: var(--test);
+    }
+
+
+
+
 
     @keyframes fade-in {
         /* from {opacity: 0;} */
