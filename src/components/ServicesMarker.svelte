@@ -1,7 +1,6 @@
 <script>
     import { urlFor } from '../lib/utils/image.ts';
     export let service
-    console.log(service)
 </script>
 <style>
     * {
@@ -42,14 +41,21 @@
             margin: 1rem;
             margin-inline: auto;
             max-width: 15rem;
+            aspect-ratio: 1/1;
             animation: linear;
+            padding: 1.5rem;
         }
         .marker > img {
             display: inline-block;
+            width: 150px;
+            height: 150px;
         }
         .marker:hover {
             /* transform: scale(1.1); */
             --show-description: none;
+        }
+        .marker>h2 {
+            margin: 1rem;
         }
 
 	}
@@ -77,7 +83,7 @@
         <div class="marker" style="left: {service.left}; top: {service.top};" on:mouseover={handleHide} on:keydown={handleHide}>
             <h3 >{ service.name }</h3>
             <p>{ service.shortDescription}</p>
-            <img src={urlFor(service.mainImage).width(200).url()} alt="{service.shortDescription}"/>
+            <img src={urlFor(service.mainImage).width(200).fit("crop").url()} alt="{service.shortDescription}"/>
         </div>
     </a>
 {/if}

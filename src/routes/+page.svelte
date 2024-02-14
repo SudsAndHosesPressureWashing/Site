@@ -98,7 +98,6 @@
 
 </style>
 
-
 <section class="intro">
 	<h1 class="main-title">Welcome to {data.company.name}</h1>
 	<p>{data.company.excerpt}</p>

@@ -6,6 +6,22 @@
         margin: 0;
         padding: 0;
     }
+
+    .hide-nav {
+        display: flex;
+    }
+
+    .nav-show {
+        display: flex;
+    }
+
+    @media (max-width: 680px) {
+        .hide-nav {
+            display: none;
+        }
+
+	}
+
     ul {
         display: flex;
         height: auto;
@@ -17,7 +33,8 @@
     }
     a {
         text-decoration: none;
-        background-image: linear-gradient(var(--primary-hover), var(--primary-hover));
+        color: var(--primary);
+        /* background-image: linear-gradient(var(--primary-hover), var(--primary-hover)); */
         background-size: 0% 0.1em;
         background-position-y: 100%;
         background-position-x: 0%;
@@ -35,16 +52,14 @@
         box-shadow: 0.35rem 0.35rem color-mix(in srgb, var(--primary-hover) 70%, transparent);
     }
     nav {
-        display: var(--show-nav);
-    }
-
-    .nav-show {
         display: flex;
     }
 
-</style>
 
-<div class="nav-show">
+
+</style>
+{#if open}
+<div>
     <nav>
         <ul>
             <li><a href="/AboutUs">About Us</a></li>
@@ -55,3 +70,4 @@
         </ul>
     </nav>
 </div>
+{/if}

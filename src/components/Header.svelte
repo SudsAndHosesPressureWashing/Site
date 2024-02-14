@@ -1,48 +1,18 @@
 <script>
-    import Navigation from "./Navigation.svelte";
 	import { urlFor } from '$lib/utils/image.ts';
     export let companyData;
+    let open=true;
+
+    function switchOpen() {
+        console.log('higkjghjkg')
+        open = !open;
+    }
 </script>
 <style>
 
     * {
         margin: 0;
-    }
-
-    .open {
-        rotate: 90deg;
-        text-align: center;
-        width: 100%;
-        height: auto;
-        display: none;
-        font-size: 2rem;
-    }
-
-    @media (max-width: 680px) {
-        header {
-            flex-direction: column;
-            --show-nav: none;
-        }
-        img {
-            width: 200px;
-            margin-inline: auto;
-        }
-        .open {
-            display: inline-block;
-        }
-
-	}
-
-	
-
-    .nav-container {
-        
-        display: flex;
-        justify-content: space-evenly;
-        /* flex-wrap: wrap; */
-        top: 0;
-        width: 100%;
-        margin-inline: auto;
+        padding: 0;
     }
 
     header {
@@ -58,13 +28,98 @@
         margin-block: auto;
     }
 
+    .nav-container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        top: 0;
+        width: 100%;
+        margin-inline: auto;
+    }
+
+    .hide-nav {
+        display: flex;
+    }
+
+    .show-nav {
+        display: flex;
+    }
+
+    ul {
+        display: flex;
+        height: auto;
+        width: auto;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        gap: 1.2rem;
+        padding: 2rem;
+    }
+    a {
+        text-decoration: none;
+        color: var(--primary);
+        /* background-image: linear-gradient(var(--primary-hover), var(--primary-hover)); */
+        background-size: 0% 0.1em;
+        background-position-y: 100%;
+        background-position-x: 0%;
+        background-repeat: no-repeat;
+        transition: box-shadow 0.2s ease-in-out;
+        text-align: center;
+        box-shadow: 0.15rem 0.15rem color-mix(in srgb, var(--primary-hover) 70%, transparent);
+        padding-right: 0.1rem;
+
+    }
+    a:hover,
+    a:focus,
+    a:active {
+        box-shadow: 0.35rem 0.35rem color-mix(in srgb, var(--primary-hover) 70%, transparent);
+    }
+
+    .hamburger {
+        rotate: 90deg;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        display: none;
+        font-size: 2rem;
+    }
+
+    @media (max-width: 680px) {
+        header {
+            flex-direction: column;
+        }
+        img {
+            width: 200px;
+            margin-inline: auto;
+        }
+        .hamburger {
+            display: inline-block;
+        }
+
+        .hamburger:hover {
+            color: red;
+        }
+
+        .hide-nav {
+            display: none;
+        }
+
+	}
 </style>
 <header>
     <div class="nav-container">
         <img src={urlFor(companyData.logo).width(200).url()} alt="Logo"/>
-        <Navigation />
+        <nav class={open? 'show-nav':'hide-nav'}>
+            <ul>
+                <li><a href="/AboutUs">About Us</a></li>
+                <li><a href="/FAQ">Frequently Asked Questions</a></li>
+                <li><a href="/Services">Services</a></li>
+                <li><a href="/Projects">Projects</a></li>
+                <li><a href="/GetAQuote">Get A Quote</a></li>
+            </ul>
+        </nav>
     </div>
 
-    <div class="open">III</div>
+    <div class="hamburger" on:click={switchOpen} on:keydown={switchOpen}>III</div>
+    <button on:click={() => (console.log('clicked'))}>Test</button>
 </header>
 

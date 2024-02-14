@@ -30,7 +30,7 @@ main {
 [data-theme="dark"] {
   --primary: #d81b60;
   --primary-hover: #e91e63;
-  --primary-pico: #D62F3E;
+  
   --primary-focus: rgba(216, 27, 96, 0.25);
   --primary-inverse: #FFF;
 }
@@ -38,6 +38,7 @@ main {
 :root {
   --primary: #d81b60;
   --primary-hover: #e91e63;
+  --primary-pico: #D62F3E;
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
