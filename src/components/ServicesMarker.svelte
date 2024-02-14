@@ -80,7 +80,7 @@
 </style>
 {#if service.top!=="undefined"}
     <a href="{service.serviceSlug}">
-        <div class="marker" style="left: {service.left}; top: {service.top};" on:mouseover={handleHide} on:keydown={handleHide}>
+        <div class="marker" style="left: {service.left}; top: {service.top};" >
             <h3 >{ service.name }</h3>
             <p>{ service.shortDescription}</p>
             <img src={urlFor(service.mainImage).width(200).fit("crop").url()} alt="{service.shortDescription}"/>

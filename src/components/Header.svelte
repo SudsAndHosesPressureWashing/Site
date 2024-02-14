@@ -1,10 +1,9 @@
 <script>
 	import { urlFor } from '$lib/utils/image.ts';
     export let companyData;
-    let open=true;
+    let open=false;
 
     function switchOpen() {
-        console.log('higkjghjkg')
         open = !open;
     }
 </script>
@@ -119,7 +118,6 @@
         </nav>
     </div>
 
-    <div class="hamburger" on:click={switchOpen} on:keydown={switchOpen}>III</div>
-    <button on:click={() => (console.log('clicked'))}>Test</button>
+    <div class="hamburger" on:click={()=>(open = !open)} on:keydown={()=>(open = !open)}>III</div>
 </header>
 
