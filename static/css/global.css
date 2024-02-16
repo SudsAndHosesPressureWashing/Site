@@ -50,6 +50,12 @@ main {
   
 }
 
+.styled-container {
+  backdrop-filter: var(--backdrop-filter);
+  background-color: var(--bg-color);
+  box-shadow: 60px 16px color-mix(in srgb, var(--primary-hover) 70%, transparent);
+}
+
 /* * {
   border: 1px red solid;
 } */

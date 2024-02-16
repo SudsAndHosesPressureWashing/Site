@@ -82,6 +82,22 @@
         font-size: 2rem;
     }
 
+    .hamburger:hover {
+        color: var(--primary-hover)
+    }
+
+    .hamburger-open {
+        rotate: 0deg;
+        text-align: center;
+        width: 100%;
+        height: auto;
+        font-size: 2rem;
+    }
+
+    .hamburger-open:hover {
+        color: var(--primary-hover)
+    }
+
     @media (max-width: 680px) {
         header {
             flex-direction: column;
@@ -94,10 +110,6 @@
             display: inline-block;
         }
 
-        .hamburger:hover {
-            color: red;
-        }
-
         .hide-nav {
             display: none;
         }
@@ -107,7 +119,7 @@
 <header>
     <div class="nav-container">
         <img src={urlFor(companyData.logo).width(200).url()} alt="Logo"/>
-        <nav class={open? 'show-nav':'hide-nav'}>
+        <nav class="{open? 'show-nav':'hide-nav'}">
             <ul>
                 <li><a href="/AboutUs">About Us</a></li>
                 <li><a href="/FAQ">Frequently Asked Questions</a></li>
@@ -118,6 +130,6 @@
         </nav>
     </div>
 
-    <div class="hamburger" on:click={()=>(open = !open)} on:keydown={()=>(open = !open)}>III</div>
+    <div class="{open? 'hamburger-open':'hamburger'}" on:click={()=>(open = !open)} on:keydown={()=>(open = !open)}>{open? 'x':'III'}</div>
 </header>
 

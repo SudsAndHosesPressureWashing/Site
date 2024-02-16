@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { PageData } from './$types';
 	import ServicesMarker from '../components/ServicesMarker.svelte';
+    import ServiceCard from '../components/ServiceCard.svelte'
 	import { each } from 'svelte/internal';
 	export let data: PageData;
 </script>
@@ -46,37 +47,55 @@
         top: 50vh;
         left: 35vw;
         text-align: center;
-        backdrop-filter: var(--backdrop-filter);
         background-color: var(--bg-color);
-        box-shadow: 60px 16px color-mix(in srgb, var(--primary-hover) 70%, transparent);
+        backdrop-filter: var(--backdrop-filter);
+        box-shadow: 10px 15px color-mix(in srgb, var(--primary-hover) 70%, transparent);
+    }
+
+    .markers-container {
+        display: inline-block;
+    }
+
+    .cards-container {
+        display: none;
     }
 
     @media (max-width: 680px) {
         .services {
+            margin-block: 50px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
             justify-content: space-around;
+            gap: 1rem;
             animation: none;
             opacity: 1;
             height: auto;
+            border-radius: 0;
+            background-color: var(--bg-color);
+            backdrop-filter: var(--backdrop-filter);
+            box-shadow: 10px 15px color-mix(in srgb, var(--primary-hover) 70%, transparent);
         }
 
         .services > h2 {
             position: inherit;
             width: 100%;
+            background-color: rgba(0,0,0,0);
+            backdrop-filter: none;
+            box-shadow: none;
+        }
+
+
+
+        .markers-container {
+            display: none;
+        }
+
+        .cards-container {
+            display: inline-block;
         }
 
 	}
-
-    .test {
-        --test: calc(100vw / 100vh);
-        width: var(--test);
-    }
-
-
-
-
 
     @keyframes fade-in {
         /* from {opacity: 0;} */
@@ -84,16 +103,6 @@
         70% {opacity: 1;}
         100% {opacity: 0;}
     }
-
-    .down {
-        margin: 0;
-        padding: 0;
-        transform: rotate(180deg);
-        text-align: center;
-        font-size: 4rem;
-        color: white;
-    }
-
 
 
 </style>
@@ -106,7 +115,14 @@
 <section class="services">
     <h2>Some of Our Services</h2>
     {#each data.services as service}
-        <ServicesMarker service={service}/>
+        {#if service.top !== undefined}
+            <div class="markers-container">
+                <ServicesMarker service={service}/>
+            </div>
+            <div class="cards-container">
+                <ServiceCard service={service}/>
+            </div>
+        {/if}
     {/each}
 </section>
 <section class="test">test</section>
