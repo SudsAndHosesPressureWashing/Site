@@ -33,9 +33,7 @@
         height: 200px;
     }
     a:hover {
-        /* transform: scale(1.1); */
         --show-description: inline-block;
-        /* color: white; */
         text-decoration: underline var(--primary-hover);
     }
 
