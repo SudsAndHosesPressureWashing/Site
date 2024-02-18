@@ -61,7 +61,7 @@
     .after {
         top: 0;
         position: relative;
-        clip-path: polygon(50% 0%, 50% 100%, 100% 100%, 100% 0%);
+        clip-path: polygon(70% 0%, 30% 100%, 100% 100%, 100% 0%);
     }
 
     .beforeandafter {
