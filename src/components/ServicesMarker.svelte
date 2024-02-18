@@ -45,7 +45,7 @@
     }
 
 </style>
-<a href="{service.serviceSlug}">
+<a href="{service.slug}">
     <div class="marker" style="left: {service.left}; top: {service.top};" >
         <h3 >{ service.name }</h3>
         <p>{ service.shortDescription}</p>

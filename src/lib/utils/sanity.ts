@@ -35,6 +35,31 @@ export async function getServices(): Promise<Service[]> {
 	)
 }
 
+export async function getService(slug: String): Promise<Service> {
+	return await client.fetch(
+		groq`*[_type == "service" && slug.current == $slug][0]`,{slug}
+	)
+}
+
+export async function getProjects(): Promise<Service[]> {
+	return await client.fetch(
+		groq`*[_type == "project"]`
+	)
+}
+
+export async function getProject(slug: String): Promise<Service> {
+	return await client.fetch(
+		groq`*[_type == "project" && slug.current == $slug][0]`,{slug}
+	)
+}
+
+
+export async function getImages(): Promise<ImageAsset[]> {
+	return await client.fetch(
+		groq`*[_type == "image"]`
+	)
+}
+
 export async function getPosts(): Promise<Post[]> {
 	return await client.fetch(
 		groq`*[_type == "post" && defined(slug.current)] | order(_createdAt desc)`
@@ -87,11 +112,40 @@ export interface Service {
 	_type: 'service';
 	_createdAt: string;
 	name: string;
-	serviceSlug: string;
+	slug: string;
+	includeMobile: boolean;
+	includeDesktop: boolean;
 	mainImage: ImageAsset;
 	shortDescription: PortableTextBlock[];
 	longDescription: PortableTextBlock[];
 	steps: Array<ServiceStep[]>;
 	left: string;
 	top: string;
+}
+
+export interface TextBlock {
+	_type: 'textblock';
+	_createdAt: string;
+	heading: string;
+	body: PortableTextBlock[];
+}
+
+export interface ImageCluster {
+	_type: 'imagecluster';
+	_createdAt: string;
+	subtitle: string;
+	images: Array<ImageAsset[]>
+}
+
+export interface Project {
+	_type: 'project';
+	_createdAt: string;
+	name: string;
+	slug: string;
+	includeHomePage: boolean;
+	beforeImage: ImageAsset;
+	afterImage: ImageAsset;
+	shortDescription: PortableTextBlock[];
+	section: Array<ImageAsset[]|TextBlock[]|ImageCluster[]>;
+	
 }

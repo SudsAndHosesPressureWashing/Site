@@ -19,9 +19,6 @@
     }
     .intro {
         margin-top: calc(5vw);
-        backdrop-filter: var(--backdrop-filter);
-        background-color: var(--bg-color);
-        box-shadow: 60px 16px color-mix(in srgb, var(--primary-hover) 70%, transparent);
     }
 
     .main-title {
@@ -107,7 +104,7 @@
 
 </style>
 
-<section class="intro">
+<section class="intro styled-container ">
 	<h1 class="main-title">Welcome to {data.company.name}</h1>
 	<p>{data.company.excerpt}</p>
 </section>
@@ -115,14 +112,18 @@
 <section class="services">
     <h2>Some of Our Services</h2>
     {#each data.services as service}
-        {#if service.top !== undefined}
+        {#if service.includeDesktop}
             <div class="markers-container">
                 <ServicesMarker service={service}/>
             </div>
+        {/if}
+        {#if service.includeMobile}
             <div class="cards-container">
                 <ServiceCard service={service}/>
             </div>
         {/if}
     {/each}
+</section>
+<section class="styled-container">
 </section>
 <section class="test">test</section>

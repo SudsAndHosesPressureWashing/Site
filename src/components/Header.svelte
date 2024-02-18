@@ -126,6 +126,7 @@
                 <li><a href="/Services">Services</a></li>
                 <li><a href="/Projects">Projects</a></li>
                 <li><a href="/GetAQuote">Get A Quote</a></li>
+                <li><a href="/Galery">Gallery</a></li>
             </ul>
         </nav>
     </div>

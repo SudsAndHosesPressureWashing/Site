@@ -1,7 +1,6 @@
 <script>
     import { urlFor } from '../lib/utils/image.ts';
     export let service
-    console.log(service.top)
 </script>
 <style>
     * {
@@ -58,7 +57,7 @@
 
 
 </style>
-<a href="services/{service.serviceSlug.current}">
+<a href="services/{service.slug.current}">
     <section>
         <h3 >{ service.name }</h3>
         <img src={urlFor(service.mainImage).width(200).fit("crop").url()} alt="{service.shortDescription}"/>
