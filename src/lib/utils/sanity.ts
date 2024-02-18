@@ -146,6 +146,7 @@ export interface Project {
 	beforeImage: ImageAsset;
 	afterImage: ImageAsset;
 	shortDescription: PortableTextBlock[];
+	servicesProvides: Array<Service[]>;
 	section: Array<ImageAsset[]|TextBlock[]|ImageCluster[]>;
 	
 }
