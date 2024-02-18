@@ -102,8 +102,16 @@
         100% {opacity: 0;}
     }
 
-    .projects-container {
+    .projects {
         margin-bottom: 3rem;
+    }
+    
+    .projects > h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .projects-container {
+        
         display: flex;
         gap: 1rem;
         justify-content: space-around;
@@ -131,10 +139,13 @@
         {/if}
     {/each}
 </section>
-<section class="styled-container projects-container">
-    {#each data.projects as project}
-        {#if project.includeHomePage}
-            <ProjectCard project={project} />
-        {/if}
-    {/each}
+<section class="styled-container projects">
+    <h2>Our Previous Projects</h2>
+    <div class="projects-container">
+        {#each data.projects as project}
+            {#if project.includeHomePage}
+                <ProjectCard project={project} />
+            {/if}
+        {/each}
+    </div>
 </section>
