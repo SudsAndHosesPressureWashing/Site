@@ -2,6 +2,7 @@
 	import type { PageData } from './$types';
 	import ServicesMarker from '../components/ServicesMarker.svelte';
     import ServiceCard from '../components/ServiceCard.svelte'
+    import ProjectCard from '../components/ProjectCard.svelte';
 	import { each } from 'svelte/internal';
 	export let data: PageData;
 </script>
@@ -101,6 +102,9 @@
         100% {opacity: 0;}
     }
 
+    .projects-container {
+        margin-bottom: 3rem;
+    }
 
 </style>
 
@@ -124,6 +128,10 @@
         {/if}
     {/each}
 </section>
-<section class="styled-container">
+<section class="styled-container projects-container">
+    {#each data.projects as project}
+        {#if project.includeHomePage}
+            <ProjectCard project={project} />
+        {/if}
+    {/each}
 </section>
-<section class="test">test</section>
