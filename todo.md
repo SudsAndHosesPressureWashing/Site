@@ -1,0 +1,1 @@
+- Make iOs and prefers reduced motion fall back to mobile layout

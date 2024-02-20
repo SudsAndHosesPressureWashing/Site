@@ -4,6 +4,7 @@
     import ServiceCard from '../components/ServiceCard.svelte'
     import ProjectCard from '../components/ProjectCard.svelte';
 	import { each } from 'svelte/internal';
+    import powerwash from '$lib/images/powerwash.svg'
 	export let data: PageData;
 </script>
 
@@ -35,7 +36,7 @@
         
         animation-timeline: view();
         animation-range-start: contain -180px;
-        animation-range-end: contain; /*75vh;*/
+        animation-range-end: contain 250px; /*75vh;*/
         
     }
 
@@ -105,7 +106,7 @@
     .projects {
         margin-bottom: 3rem;
     }
-    
+
     .projects > h2 {
         text-align: center;
         margin-bottom: 2rem;
@@ -115,6 +116,30 @@
         display: flex;
         gap: 1rem;
         justify-content: space-around;
+    }
+    @keyframes quote {
+        0% {opacity: 0; scale: 0.5;}
+        100% {opacity: 1; scale: 1;}
+    }
+    .quote {
+        text-align: center;
+        opacity: 0;
+        animation: quote linear forwards;
+        animation-timeline: view();
+        animation-range-start: contain ;
+        animation-range-end: contain 100px;
+        margin-block: 10rem;
+        backdrop-filter: var(--backdrop-filter);
+        background-color: var(--bg-color);
+        width:20rem;
+
+
+    }
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline var(--primary-hover);
     }
 
 </style>
@@ -149,3 +174,9 @@
         {/each}
     </div>
 </section>
+<a href="/quote">
+    <section class="quote">
+        <img src="{powerwash}" alt="Get A Free Quote" />
+        <h2>Get A Free Quote</h2>
+    </section>
+</a>
