@@ -111,10 +111,13 @@
         margin-bottom: 2rem;
     }
     .projects-container {
-        
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
         gap: 1rem;
         justify-content: space-around;
+        width: auto;
     }
     @keyframes quote {
         0% {opacity: 0; scale: 0.5;}
