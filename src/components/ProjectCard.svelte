@@ -53,6 +53,10 @@
         text-decoration: none;
     }
 
+    a:hover {
+        text-decoration: underline var(--primary-hover);
+    }
+
     .before {
         top: 0;
         position: absolute;

@@ -41,7 +41,6 @@
     }
 
     .services > h2 {
-        color: white;
         position: fixed;
         top: 50vh;
         left: 35vw;
@@ -128,27 +127,18 @@
         animation-timeline: view();
         animation-range-start: contain ;
         animation-range-end: contain 100px;
-        margin-block: 10rem;
+        margin-top: 10rem;
+        margin-bottom: 5rem;
         backdrop-filter: var(--backdrop-filter);
         background-color: var(--bg-color);
         width:20rem;
-
-
     }
-    a {
-        text-decoration: none;
-    }
-    a:hover {
-        text-decoration: underline var(--primary-hover);
-    }
-
 </style>
 
 <section class="intro styled-container ">
 	<h1 class="main-title">Welcome to {data.company.name}</h1>
 	<p>{data.company.excerpt}</p>
 </section>
-<!-- <section class="down">^</section> -->
 <section class="services">
     <h2>Some of Our Services</h2>
     {#each data.services as service}

@@ -55,7 +55,7 @@
     }
     a {
         text-decoration: none;
-        color: var(--primary);
+        color: white;
         /* background-image: linear-gradient(var(--primary-hover), var(--primary-hover)); */
         background-size: 0% 0.1em;
         background-position-y: 100%;
@@ -80,6 +80,7 @@
         height: auto;
         display: none;
         font-size: 2rem;
+        color: white;
     }
 
     .hamburger:hover {
@@ -92,6 +93,7 @@
         width: 100%;
         height: auto;
         font-size: 2rem;
+        color: white;
     }
 
     .hamburger-open:hover {

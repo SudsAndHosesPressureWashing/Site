@@ -29,16 +29,18 @@ main {
 
 [data-theme="dark"] {
   --primary: #d81b60;
-  --primary-hover: #e91e63;
+  --primary-hover: #d81b60;
   
   --primary-focus: rgba(216, 27, 96, 0.25);
   --primary-inverse: #FFF;
 }
 
 :root {
-  --primary: #d81b60;
-  --primary-hover: #e91e63;
+  --primary: #D62F3E;
+  --primary-hover: #D62F3E;
   --primary-pico: #D62F3E;
+  --pico-primary-hover-underline: #D62F3E;
+  --pico-underline: white;
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
@@ -54,6 +56,24 @@ main {
   backdrop-filter: var(--backdrop-filter);
   background-color: var(--bg-color);
   box-shadow: 60px 16px color-mix(in srgb, var(--primary-hover) 70%, transparent);
+  color: white;
+}
+
+.styled-container > h1,h2,h3,h4,h5,h6 {
+  color: white;
+}
+
+.styled-container > p {
+  color: white;
+}
+
+a > h1,h2,h3,h4,h5,h6 {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover  > h2 {
+  color: var(--primary-hover)
 }
 
 /* * {

@@ -35,9 +35,10 @@
     }
     span {
         font-size: 0.8;
-    }
-    p {
         color: white;
+    }
+    a:hover > span {
+        text-decoration: underline var(--primary-hover);
     }
 
 </style>
@@ -45,10 +46,13 @@
     Reach Out
     <div class="socials">
     {#each socials as social}
+    <a href="{social.url.current}">
         <div class="social__card">
-            <a href="{social.url.current}"><img src="{urlFor(social.logo).width(40)}" alt="{social.name}" /></a>
+            <img src="{urlFor(social.logo).width(40)}" alt="{social.name}" />
             <span>{social.name}</span>
+            
         </div>
+    </a>
     
     {/each}
     </div>
