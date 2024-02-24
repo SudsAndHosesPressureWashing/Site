@@ -12,7 +12,7 @@ return {
 	assets: new Set(["css/global.css","images/bgimage.jpeg","images/favicon.png"]),
 	mimeTypes: {".css":"text/css",".jpeg":"image/jpeg",".png":"image/png"},
 	_: {
-		client: {"start":"_app/immutable/entry/start.9b542022.js","app":"_app/immutable/entry/app.832718bf.js","imports":["_app/immutable/entry/start.9b542022.js","_app/immutable/chunks/index.ce7d294b.js","_app/immutable/chunks/singletons.2fb552fe.js","_app/immutable/chunks/control.c2cf8273.js","_app/immutable/entry/app.832718bf.js","_app/immutable/chunks/preload-helper.a4192956.js","_app/immutable/chunks/index.ce7d294b.js"],"stylesheets":[],"fonts":[]},
+		client: {"start":"_app/immutable/entry/start.206ebde2.js","app":"_app/immutable/entry/app.049f7425.js","imports":["_app/immutable/entry/start.206ebde2.js","_app/immutable/chunks/index.ce7d294b.js","_app/immutable/chunks/singletons.9b1c76ad.js","_app/immutable/chunks/control.c2cf8273.js","_app/immutable/entry/app.049f7425.js","_app/immutable/chunks/preload-helper.a4192956.js","_app/immutable/chunks/index.ce7d294b.js"],"stylesheets":[],"fonts":[]},
 		nodes: [
 			__memo(() => import('../server/nodes/0.js')),
 			__memo(() => import('../server/nodes/1.js')),

@@ -38,11 +38,11 @@
 </style>
 <form class="styled-container" action="/sendquote" method="post" name="quote" netlify>
     <h2>Click On The Services You'd Like Quoted</h2>
-    <div class="services-container">
+    <!-- <div class="services-container">
         {#each data.services as service }
             <CheckableService service = {service} />
         {/each}
-    </div>
+    </div> -->
     
     <fieldset>
         <label for="name">Name</label><input type="name" name="name" id="name"/>

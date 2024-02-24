@@ -15,7 +15,7 @@ const CheckableService = create_ssr_component(($$result, $$props, $$bindings, sl
   $$result.css.add(css$1);
   return `<section class="svelte-1uj2iqg"><label${add_attribute("for", service.slug.latest, 0)} class="svelte-1uj2iqg"><h3 class="svelte-1uj2iqg">${escape(service.name)}</h3>
     <div class="image-container svelte-1uj2iqg"><img${add_attribute("src", urlFor(service.mainImage).width(300).height(300).fit("crop").url(), 0)}${add_attribute("alt", service.name, 0)} class="svelte-1uj2iqg">
-        <input type="checkbox"${add_attribute("id", service.slug.latest, 0)}${add_attribute("name", service.slug.latest, 0)}${add_attribute("alt", service.name, 0)} class="svelte-1uj2iqg"></div></label></section>`;
+        <input type="checkbox"${add_attribute("id", service.slug.latest, 0)}${add_attribute("alt", service.name, 0)}${add_attribute("name", service.slug.latest, 0)} class="svelte-1uj2iqg"></div></label></section>`;
 });
 const _page_svelte_svelte_type_style_lang = "";
 const css = {
