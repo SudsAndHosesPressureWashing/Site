@@ -1,7 +1,7 @@
 <script>
     import CheckableService from '../../components/CheckableService.svelte';
     export let data;
-    console.log(data)
+    export const prerender = true;
 </script>
 <style>
 
@@ -37,33 +37,21 @@
         text-decoration: underline;
     }
 </style>
-<!-- <form class="styled-container" action="/sendquote" method="post" name="quote" data-netlify="true">
+<form class="styled-container" action="/sendquote" method="post" name="quote" netlify>
     <h2>Click On The Services You'd Like Quoted</h2>
     <div class="services-container">
         {#each data.services as service }
             <CheckableService service = {service} />
         {/each}
-    </div> -->
-<!--     
+    </div>
+    
     <fieldset>
         <label for="name">Name</label><input type="name" name="name" id="name"/>
         <label for="email">Email</label><input type="email" name="email" id="email"/>
         <label for="phone">Phone</label><input type="phone" name="phone" id="phone"/>
         <label for="other">Any Other Information We Should Know?</label><textarea name="other" id="other"/>
         <input type="submit" value="Submit" />
-    </fieldset> -->
+    </fieldset>
     
 
-<!-- </form> -->
-<form class="styled-container" action="/sendquote" method="post" name="quote" data-netlify="true">
-    <h2>Click On The Services You'd Like Quoted</h2>
-    <div class="services-container">
-        <!-- Example input fields -->
-        <input type="checkbox" name="service1" id="service1">
-        <label for="service1">Service 1</label>
-        <input type="checkbox" name="service2" id="service2">
-        <label for="service2">Service 2</label>
-        <!-- Ensure each input field has a unique name attribute -->
-    </div>
-    <button type="submit">Submit</button>
 </form>
