@@ -1,8 +1,7 @@
 import {getServices} from '$lib/utils/sanity';
 import { error } from '@sveltejs/kit';
 import type { PageLoad } from './$types';
-export const prerender = true;
-export const load = (async () => {
+export const prerender = true;export const load = (async () => {
 	const services = await getServices();
 	if (services) {
 		return {

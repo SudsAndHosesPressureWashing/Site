@@ -36,7 +36,7 @@
         text-decoration: underline;
     }
 </style>
-<form class="styled-container" method="post" name="quote" data-netlify="true">
+<form class="styled-container" method="post" name="quote" data-netlify="true" action="https://formsubmit.co/david.d.smit@gmail.com">
     <h2>Click On The Services You'd Like Quoted</h2>
     <div class="services-container">
         {#each data.services as service }
