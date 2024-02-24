@@ -53,7 +53,7 @@
         gap: 1.2rem;
         padding: 2rem;
     }
-    a {
+    li > a {
         text-decoration: none;
         color: white;
         /* background-image: linear-gradient(var(--primary-hover), var(--primary-hover)); */
@@ -67,9 +67,9 @@
         padding-right: 0.1rem;
 
     }
-    a:hover,
-    a:focus,
-    a:active {
+    li > a:hover,
+    li > a:focus,
+    li > a:active {
         box-shadow: 0.35rem 0.35rem color-mix(in srgb, var(--primary-hover) 70%, transparent);
     }
 

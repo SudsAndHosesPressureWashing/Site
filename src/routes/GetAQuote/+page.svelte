@@ -26,8 +26,18 @@
     input {
         text-align: center;
     }
+    input[type="submit"] {
+        background-color: var(--transparent-red);
+        border: white 1px dashed;
+    }
+
+    input[type="submit"]:hover {
+        background-color: var(--transparent-red);
+        border: white 1px solid;
+        text-decoration: underline;
+    }
 </style>
-<form class="styled-container" action="/sendquote" method="post" netlify>
+<form class="styled-container" action="/sendquote" method="post" data-netlify="true">
     <h2>Click On The Services You'd Like Quoted</h2>
     <div class="services-container">
         {#each data.services as service }
@@ -39,8 +49,8 @@
         <label for="name">Name</label><input type="name" id="name"/>
         <label for="email">Email</label><input type="email" id="email"/>
         <label for="phone">Phone</label><input type="phone" id="phone"/>
-        <label for="other">Any Other Information We Should Know?</label><textarea type="text" id="other"/>
-        <input type="submit" value="submit" />
+        <label for="other">Any Other Information We Should Know?</label><textarea id="other"/>
+        <input type="submit" value="Submit" />
     </fieldset>
 
 </form>

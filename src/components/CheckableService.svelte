@@ -41,7 +41,7 @@
         /* margin-top:-310px; */
         top: calc(50% - var(--check-size) / 2);
         left: calc(50% - var(--check-size) / 2);
-        background-color: color-mix(in srgb, var(--primary-hover) 70%, transparent);
+        background-color: var(--transparent-red);
         border: var(--primary-hover);
         opacity: 0;
         font-size: 4rem;
@@ -57,7 +57,7 @@
         90% {opacity: 1; transform: scale(1);}
     }
 
-    input[type="checkbox"]:checked + label {
+    input[type="checkbox"]:checked + label > img{
         opacity: 0.8;
     }
 

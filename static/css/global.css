@@ -49,13 +49,13 @@ main {
   --backdrop-filter: blur(10px);         
   --bg-color: rgba(50,50,50,0.8);
   --mobile-break: 640px;
-  
+  --transparent-red: color-mix(in srgb, var(--primary-hover) 70%, transparent);
 }
 
 .styled-container {
   backdrop-filter: var(--backdrop-filter);
   background-color: var(--bg-color);
-  box-shadow: 60px 16px color-mix(in srgb, var(--primary-hover) 70%, transparent);
+  box-shadow: 60px 16px car(--transparent-red);
   color: white;
 }
 
