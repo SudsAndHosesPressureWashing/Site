@@ -44,8 +44,7 @@
     }
 
     h3 {
-        vertical-align: center;
-        
+        vertical-align: center; 
     }
 
     a {

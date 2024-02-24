@@ -120,15 +120,15 @@
 </style>
 <header>
     <div class="nav-container">
-        <img src={urlFor(companyData.logo).width(200).url()} alt="Logo"/>
+        <a href="/"><img src={urlFor(companyData.logo).width(200).url()} alt="Logo"/></a>
         <nav class="{open? 'show-nav':'hide-nav'}">
             <ul>
-                <li><a href="/AboutUs">About Us</a></li>
-                <li><a href="/FAQ">Frequently Asked Questions</a></li>
+                <!-- <li><a href="/AboutUs">About Us</a></li> -->
+                <!-- <li><a href="/FAQ">Frequently Asked Questions</a></li> -->
                 <li><a href="/Services">Services</a></li>
-                <li><a href="/Projects">Projects</a></li>
-                <li><a href="/GetAQuote">Get A Quote</a></li>
-                <li><a href="/Galery">Gallery</a></li>
+                <!-- <li><a href="/Projects">Projects</a></li> -->
+                <li><a href="/GetAQuote">Get A Free Quote</a></li>
+                <!-- <li><a href="/Galery">Gallery</a></li> -->
             </ul>
         </nav>
     </div>
