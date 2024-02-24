@@ -39,17 +39,17 @@
 </style>
 <form class="styled-container" action="/sendquote" method="post" name="quote" data-netlify="true">
     <h2>Click On The Services You'd Like Quoted</h2>
-    <div class="services-container">
+    <!-- <div class="services-container">
         {#each data.services as service }
             <CheckableService service = {service} />
         {/each}
-    </div>
+    </div> -->
     
     <fieldset>
-        <label for="name">Name</label><input type="name" id="name"/>
-        <label for="email">Email</label><input type="email" id="email"/>
-        <label for="phone">Phone</label><input type="phone" id="phone"/>
-        <label for="other">Any Other Information We Should Know?</label><textarea id="other"/>
+        <label for="name">Name</label><input type="name" name="name" id="name"/>
+        <label for="email">Email</label><input type="email" name="email" id="email"/>
+        <label for="phone">Phone</label><input type="phone" name="phone" id="phone"/>
+        <label for="other">Any Other Information We Should Know?</label><textarea name="other" id="other"/>
         <input type="submit" value="Submit" />
     </fieldset>
 
