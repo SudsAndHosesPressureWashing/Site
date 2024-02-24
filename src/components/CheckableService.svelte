@@ -71,7 +71,7 @@
     <h3>{service.name}</h3>
     <div class="image-container">
         <img src="{urlFor(service.mainImage).width(300).height(300).fit("crop").url()}" alt="{service.name}"/>
-        <input type="checkbox" id="{service.slug.latest}" alt="{service.name}" name="quote" />
+        <input type="checkbox" id="{service.slug.latest}" alt="{service.name}">
     </div>
 </label>
 </section>

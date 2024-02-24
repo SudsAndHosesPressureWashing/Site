@@ -46,10 +46,10 @@
     </div>
     
     <fieldset>
-        <label for="name">Name</label><input type="name" id="name" name="quote"/>
-        <label for="email">Email</label><input type="email" id="email" name="quote"/>
-        <label for="phone">Phone</label><input type="phone" id="phone" name="quote"/>
-        <label for="other">Any Other Information We Should Know?</label><textarea id="other" name="quote"/>
+        <label for="name">Name</label><input type="name" id="name"/>
+        <label for="email">Email</label><input type="email" id="email"/>
+        <label for="phone">Phone</label><input type="phone" id="phone"/>
+        <label for="other">Any Other Information We Should Know?</label><textarea id="other"/>
         <input type="submit" value="Submit" />
     </fieldset>
 
