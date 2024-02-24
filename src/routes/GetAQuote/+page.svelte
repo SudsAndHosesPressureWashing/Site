@@ -48,6 +48,7 @@
     </div>
     
     <fieldset>
+        <input type="checkbox" name="test" id="test" />
         <label for="name">Name</label><input type="name" name="name" id="name"/>
         <label for="email">Email</label><input type="email" name="email" id="email"/>
         <label for="phone">Phone</label><input type="phone" name="phone" id="phone"/>
