@@ -1,7 +1,6 @@
 <script>
     import CheckableService from '../../components/CheckableService.svelte';
     export let data;
-    export const prerender = true;
 </script>
 <style>
 
