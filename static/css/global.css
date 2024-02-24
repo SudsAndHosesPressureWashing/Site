@@ -55,7 +55,7 @@ main {
 .styled-container {
   backdrop-filter: var(--backdrop-filter);
   background-color: var(--bg-color);
-  box-shadow: 60px 16px car(--transparent-red);
+  box-shadow: 60px 16px var(--transparent-red);
   color: white;
 }
 
