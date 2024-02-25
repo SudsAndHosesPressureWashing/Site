@@ -41,11 +41,11 @@
     <input type="hidden" name="_subject" value="New Quote Request">
     <input type="text" name="_honey" style="display:none">
     <h2>Click On The Services You'd Like Quoted</h2>
-    <div class="services-container">
+    <fieldset class="services-container">
         {#each data.services as service }
             <CheckableService service = {service} />
         {/each}
-    </div>
+    </fieldset>
     
     <fieldset>
         <input type="checkbox" name="test" id="test" />

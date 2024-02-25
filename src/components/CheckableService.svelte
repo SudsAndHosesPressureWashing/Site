@@ -14,7 +14,7 @@
         padding: 0.5rem;
     }
     
-    fieldset {
+    label {
         margin: 0.5rem;
         vertical-align: middle;
         text-align: center;
@@ -66,7 +66,7 @@
     }
 
 </style>
-<fieldset>
+
 <label for="{service.slug.latest}">
     <h3>{service.name}</h3>
     <div class="image-container">
@@ -74,5 +74,5 @@
         <input type="checkbox" id="{service.slug.latest}" alt="{service.name}" name="{service.slug.latest}" />
     </div>
 </label>
-</fieldset>
+
 
