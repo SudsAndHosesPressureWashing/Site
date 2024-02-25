@@ -24,6 +24,7 @@
         padding: 0.5rem;
         width: 15rem;
         --show-description: none;
+        position: relative;
     }
 
     img {
@@ -69,10 +70,10 @@
 
 <label for="{service.slug.latest}">
     <h3>{service.name}</h3>
-    <div class="image-container">
+    <!-- <div class="image-container"> -->
         <img src="{urlFor(service.mainImage).width(300).height(300).fit("crop").url()}" alt="{service.name}"/>
         <input type="checkbox" id="{service.slug.latest}" alt="{service.name}" name="{service.slug.latest}" />
-    </div>
+    <!-- </div> -->
 </label>
 
 
