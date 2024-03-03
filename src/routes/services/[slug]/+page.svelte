@@ -4,7 +4,6 @@
 	import { urlFor } from '$lib/utils/image';
 	import Step from '../../../components/Step.svelte';
 	export let data;
-	console.log(data)
 </script>
 <style>
 	* {

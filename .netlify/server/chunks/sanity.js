@@ -27,7 +27,13 @@ async function getServices() {
 }
 async function getService(slug) {
   return await client.fetch(
-    groq`*[_type == "service" && slug.current == $slug][0]`,
+    groq`*[_type == "service" && slug.current == $slug][0]
+		{
+		  ...,
+		  'steps': steps[]->{
+			...
+		  }
+		}`,
     { slug }
   );
 }

@@ -15,8 +15,8 @@ const Header = create_ssr_component(($$result, $$props, $$bindings, slots) => {
   return `<header class="svelte-gacn24"><div class="nav-container svelte-gacn24"><a href="/" class="svelte-gacn24"><img${add_attribute("src", urlFor(companyData.logo).width(200).url(), 0)} alt="Logo" class="svelte-gacn24"></a>
         <nav class="${escape(null_to_empty("hide-nav"), true) + " svelte-gacn24"}"><ul class="svelte-gacn24">
                 
-                
-                
+                <li class="svelte-gacn24"><a href="/Services" class="svelte-gacn24">Services</a></li>
+                <li class="svelte-gacn24"><a href="/Projects" class="svelte-gacn24">Projects</a></li>
                 <li class="svelte-gacn24"><a href="/GetAQuote" class="svelte-gacn24">Get A Free Quote</a></li>
                 </ul></nav></div>
 

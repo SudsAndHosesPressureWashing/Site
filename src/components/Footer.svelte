@@ -37,9 +37,6 @@
         font-size: 0.8;
         color: white;
     }
-    a:hover > span {
-        text-decoration: underline var(--primary-hover);
-    }
 
 </style>
 <footer>

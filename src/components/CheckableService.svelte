@@ -1,7 +1,6 @@
 <script>
     import { urlFor } from '../lib/utils/image.ts';
     export let service;
-    export let checked = '';
 </script>
 <style>
     * {
