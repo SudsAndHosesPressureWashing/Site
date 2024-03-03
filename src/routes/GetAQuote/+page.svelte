@@ -22,8 +22,10 @@
         max-width: 40rem;
         margin-inline: auto;
     }
-    input {
+    input, textarea {
         text-align: center;
+        background-color: rgba(0,0,0,0);
+        border: 1px solid white;
     }
     input[type="submit"] {
         background-color: var(--transparent-red);

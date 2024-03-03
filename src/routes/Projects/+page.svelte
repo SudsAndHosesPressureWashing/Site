@@ -1,5 +1,5 @@
 <script>
-    import ServiceCard from '../../components/ServiceCard.svelte';
+    import ProjectCard from '../../components/ProjectCard.svelte';
     export let data;
 </script>
 <style>
@@ -8,10 +8,10 @@
     }
 </style>
 <section class="styled-container">
-    <h1>Our Services</h1>
+    <h1>Our Projects</h1>
     <div class="card-container">
-        {#each data.services as service}
-            <ServiceCard service={service} />
+        {#each data.projects as project}
+            <ProjectCard project={project} />
         {/each}
     </div>
 </section>

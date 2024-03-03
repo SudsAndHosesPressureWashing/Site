@@ -59,6 +59,14 @@ main {
   color: white;
 }
 
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
+}
+
 .styled-container > h1,h2,h3,h4,h5,h6 {
   color: white;
 }

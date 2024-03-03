@@ -125,8 +125,8 @@
             <ul>
                 <!-- <li><a href="/AboutUs">About Us</a></li> -->
                 <!-- <li><a href="/FAQ">Frequently Asked Questions</a></li> -->
-                <!-- <li><a href="/Services">Services</a></li> -->
-                <!-- <li><a href="/Projects">Projects</a></li> -->
+                <li><a href="/Services">Services</a></li>
+                <li><a href="/Projects">Projects</a></li>
                 <li><a href="/GetAQuote">Get A Free Quote</a></li>
                 <!-- <li><a href="/Galery">Gallery</a></li> -->
             </ul>

@@ -37,17 +37,23 @@ export async function getServices(): Promise<Service[]> {
 
 export async function getService(slug: String): Promise<Service> {
 	return await client.fetch(
-		groq`*[_type == "service" && slug.current == $slug][0]`,{slug}
+		groq`*[_type == "service" && slug.current == $slug][0]
+		{
+		  ...,
+		  'steps': steps[]->{
+			...
+		  }
+		}`,{slug}
 	)
 }
 
-export async function getProjects(): Promise<Service[]> {
+export async function getProjects(): Promise<Project[]> {
 	return await client.fetch(
 		groq`*[_type == "project"]`
 	)
 }
 
-export async function getProject(slug: String): Promise<Service> {
+export async function getProject(slug: String): Promise<Project> {
 	return await client.fetch(
 		groq`*[_type == "project" && slug.current == $slug][0]`,{slug}
 	)
@@ -72,15 +78,6 @@ export async function getPost(slug: string): Promise<Post> {
 	});
 }
 
-export interface Post {
-	_type: 'post';
-	_createdAt: string;
-	title?: string;
-	slug: Slug;
-	excerpt?: string;
-	mainImage?: ImageAsset;
-	body: PortableTextBlock[];
-}
 
 export interface Company {
 	_type: 'company';

@@ -54,7 +54,14 @@
     }
 
     a:hover {
+        --show-description: inline-block;
         text-decoration: underline var(--primary-hover);
+    }
+
+    a:hover > section {
+        animation: 0.2 linear; 
+        border: solid var(--primary-hover) 2px;
+        color: var(--primary-hover)
     }
 
     .before {
@@ -73,7 +80,7 @@
     }
 
 </style>
-<a href="projects/{project.slug.current}">
+<a href="Projects/{project.slug.current}">
     <section>
         <h3 >{ project.name }</h3>
         <div class="beforeandafter">
