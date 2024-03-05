@@ -10,7 +10,8 @@
     h3 {
         position: absolute;
         width: 200px;
-        top: calc(50% - 4em / 2);
+        top: 50%;
+        transform: translate(0,-50%);
         left: 0;
         text-align: center;
     }
@@ -37,9 +38,10 @@
         display: var(--p);
         position: absolute;
         text-align: center;
-        top:0;
+        top:50%;
         margin-block: auto;
         left: 0;
+        transform: translate(0,-50%);
         display: var(block);
         color: white;
     }
