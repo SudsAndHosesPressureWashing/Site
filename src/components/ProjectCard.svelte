@@ -80,7 +80,7 @@
     }
 
 </style>
-<a href="Projects/{project.slug.current}">
+<a href="projects/{project.slug.current}">
     <section>
         <h3 >{ project.name }</h3>
         <div class="beforeandafter">
