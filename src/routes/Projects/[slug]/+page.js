@@ -1,5 +1,5 @@
 import { error } from '@sveltejs/kit';
-import { getProject } from '$lib/utils/sanity';
+import { getService } from '$lib/utils/sanity';
 
 /** @type {import('./$types').PageLoad} */
 

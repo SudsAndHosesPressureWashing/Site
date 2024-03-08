@@ -1,6 +1,8 @@
 <script>
+
     import ServiceCard from '../../components/ServiceCard.svelte';
     export let data;
+
 </script>
 <style>
     h1 {

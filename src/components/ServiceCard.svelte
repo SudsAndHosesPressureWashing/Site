@@ -1,6 +1,9 @@
 <script>
     import { urlFor } from '../lib/utils/image.ts';
     export let service
+    console.log(service)
+
+    let opts = {prefetch: false}
 </script>
 <style>
     * {
@@ -54,9 +57,9 @@
 
 
 </style>
-<a href="services/{service.slug.current}">
+<a href="/services/{service.slug.current}" {...opts}>
     <section>
-        <h3 >{ service.name }</h3>
+        <h3 >{ service.name }  services/{service.slug.current}</h3>
         <img src={urlFor(service.mainImage).width(200).fit("crop").url()} alt="{service.shortDescription}"/>
         <p>{ service.shortDescription}</p>
     </section>

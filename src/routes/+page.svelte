@@ -167,7 +167,7 @@
         {/each}
     </div>
 </section>
-<a href="/GetAQuote">
+<a href="/getaquote">
     <section class="quote">
         <img src="{powerwash}" alt="Get A Free Quote" />
         <h2>Get A Free Quote</h2>
