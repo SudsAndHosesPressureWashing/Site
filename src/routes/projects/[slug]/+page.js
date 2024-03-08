@@ -1,15 +1,13 @@
 import { error } from '@sveltejs/kit';
-import { getService } from '$lib/utils/sanity';
+import { getProject } from '$lib/utils/sanity';
 
 /** @type {import('./$types').PageLoad} */
 
 export function load({ params }) {
-    console.log('slug')
-    console.log(params.slug)
-	let service = getService(params.slug)
+	let project = getProject(params.slug)
     
-    if (service) {
-        return service
+    if (project) {
+        return {"project":project}
     }
 
 	error(404, 'Not found');

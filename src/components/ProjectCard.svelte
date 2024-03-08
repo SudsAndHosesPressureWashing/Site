@@ -20,6 +20,8 @@
         width: 15rem;
         /* box-shadow: 2px 2px color-mix(in srgb, var(--primary-hover) 70%, transparent); */
         /* transition: all .2s ease-in-out; */
+        white-space:pre-wrap;
+        word-break:break-word;
         --show-description: none;
     }
 

@@ -15,10 +15,8 @@
         margin-left: auto;
         margin-right: auto;
         padding: 2rem;
-        /* backdrop-filter: var(--backdrop-filter);
-        background-color: var(--bg-color); */
-        
     }
+
     .intro {
         margin-top: calc(5vw);
     }
@@ -29,14 +27,12 @@
 
     .services {
         height: calc(110vh);
-        /* margin-top: 200px; */
         border-radius: 20px;
         opacity: 0;
         animation: fade-in linear forwards;
-        
         animation-timeline: view();
         animation-range-start: contain -180px;
-        animation-range-end: contain 250px; /*75vh;*/
+        animation-range-end: contain 250px;
         
     }
 
@@ -83,8 +79,6 @@
             box-shadow: none;
         }
 
-
-
         .markers-container {
             display: none;
         }
@@ -130,11 +124,49 @@
         animation-timeline: view();
         animation-range-start: contain ;
         animation-range-end: contain 100px;
-        margin-top: 10rem;
+        margin-top: 7rem;
         margin-bottom: 5rem;
         backdrop-filter: var(--backdrop-filter);
         background-color: var(--bg-color);
         width:20rem;
+    }
+
+    @media (prefers-reduced-motion) {
+        .quote {
+            opacity: 1;
+        }
+
+        .services {
+            margin-block: 50px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1rem;
+            animation: none;
+            opacity: 1;
+            height: auto;
+            border-radius: 0;
+            background-color: var(--bg-color);
+            backdrop-filter: var(--backdrop-filter);
+            box-shadow: 10px 15px color-mix(in srgb, var(--primary-hover) 70%, transparent);
+        }
+
+        .services > h2 {
+            position: inherit;
+            width: 100%;
+            background-color: rgba(0,0,0,0);
+            backdrop-filter: none;
+            box-shadow: none;
+        }
+
+        .markers-container {
+            display: none;
+        }
+
+        .cards-container {
+            display: inline-block;
+        }
     }
 </style>
 

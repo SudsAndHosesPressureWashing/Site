@@ -24,6 +24,8 @@
         /* box-shadow: 2px 2px color-mix(in srgb, var(--primary-hover) 70%, transparent); */
         /* transition: all .2s ease-in-out; */
         --show-description: none;
+        white-space:pre-wrap;
+        word-break:break-word;
     }
 
     p {
@@ -57,9 +59,9 @@
 
 
 </style>
-<a href="/services/{service.slug.current}" {...opts}>
+<a href="/services/{service.slug.current}">
     <section>
-        <h3 >{ service.name }  services/{service.slug.current}</h3>
+        <h3 >{ service.name }</h3>
         <img src={urlFor(service.mainImage).width(200).fit("crop").url()} alt="{service.shortDescription}"/>
         <p>{ service.shortDescription}</p>
     </section>
