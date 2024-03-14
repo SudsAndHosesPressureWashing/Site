@@ -6,13 +6,13 @@
   background-attachment: fixed;
 }
 
-@media (max-width: 680px) {
+/* @media (max-width: 680px) {
   :root {
-    /* --bg-image: url("$lib/images/bg."); */
+
     background-image: var(--bg-image);
     background-position: center;
     background-size: cover;
     background-attachment: inherit;
   }
-}
+} */
 
