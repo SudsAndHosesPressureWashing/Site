@@ -17,7 +17,7 @@
         border-radius: none;
         border: dashed white 2px;
         padding: 1rem;
-        width: 15rem;
+        /* width: max-content; */
         /* box-shadow: 2px 2px color-mix(in srgb, var(--primary-hover) 70%, transparent); */
         /* transition: all .2s ease-in-out; */
         white-space:pre-wrap;
@@ -79,6 +79,8 @@
 
     .beforeandafter {
         position: relative;
+        width: max-content;
+        margin-inline: auto;
     }
 
 </style>

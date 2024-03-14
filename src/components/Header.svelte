@@ -1,10 +1,12 @@
 <script>
 	import { urlFor } from '$lib/utils/image.ts';
+    import Hamburger from './Hamburger.svelte';
+    import FancyBurgers from './FancyBurgers.svelte';
     export let companyData;
-    let open=false;
+    let active=false;
 
     function switchOpen() {
-        open = !open;
+        active = !active;
     }
 </script>
 <style>
@@ -74,30 +76,7 @@
     }
 
     .hamburger {
-        rotate: 90deg;
-        text-align: center;
-        width: 100%;
-        height: auto;
         display: none;
-        font-size: 2rem;
-        color: white;
-    }
-
-    .hamburger:hover {
-        color: var(--primary-hover)
-    }
-
-    .hamburger-open {
-        rotate: 0deg;
-        text-align: center;
-        width: 100%;
-        height: auto;
-        font-size: 2rem;
-        color: white;
-    }
-
-    .hamburger-open:hover {
-        color: var(--primary-hover)
     }
 
     @media (max-width: 680px) {
@@ -109,7 +88,12 @@
             margin-inline: auto;
         }
         .hamburger {
-            display: inline-block;
+            display: flex;
+            justify-content: center;
+            margin: 1rem;
+            /* width: 3rem;
+            margin-block: auto;
+            transform: translateY(calc( -50vw + 50%)); */
         }
 
         .hide-nav {
@@ -121,7 +105,7 @@
 <header>
     <div class="nav-container">
         <a href="/"><img src={urlFor(companyData.logo).width(200).url()} alt="Logo"/></a>
-        <nav class="{open? 'show-nav':'hide-nav'}">
+        <nav class="{active? 'show-nav':'hide-nav'}">
             <ul>
                 <!-- <li><a href="/AboutUs">About Us</a></li> -->
                 <!-- <li><a href="/FAQ">Frequently Asked Questions</a></li> -->
@@ -132,7 +116,9 @@
             </ul>
         </nav>
     </div>
-
-    <div class="{open? 'hamburger-open':'hamburger'}" on:click={()=>(open = !open)} on:keydown={()=>(open = !open)}>{open? 'x':'III'}</div>
+    <div class="hamburger">
+        <FancyBurgers bind:active />
+    <!-- <div class="{open? 'hamburger-open':'hamburger'}" on:click={()=>(open = !open)} on:keydown={()=>(open = !open)}>{open? 'x':'III'}</div> -->
+    </div>
 </header>
 

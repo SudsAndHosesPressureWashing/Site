@@ -5,7 +5,14 @@
   background-size: cover;
   background-attachment: fixed;
 }
-/* 
-* {
-  border: red solid 1px;
-} */
+
+@media (max-width: 680px) {
+  :root {
+    --bg-image: url("$lib/images/bg.svg");
+    background-image: var(--bg-image);
+    background-position: center;
+    background-size: cover;
+    background-attachment: inherit;
+  }
+}
+

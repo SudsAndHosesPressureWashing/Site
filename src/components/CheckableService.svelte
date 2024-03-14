@@ -24,6 +24,7 @@
         width: 15rem;
         --show-description: none;
         position: relative;
+        outline: none;
     }
 
     img {
