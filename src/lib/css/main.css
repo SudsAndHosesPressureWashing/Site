@@ -8,7 +8,7 @@
 
 @media (max-width: 680px) {
   :root {
-    --bg-image: url("$lib/images/bg.webp");
+    /* --bg-image: url("$lib/images/bg."); */
     background-image: var(--bg-image);
     background-position: center;
     background-size: cover;
