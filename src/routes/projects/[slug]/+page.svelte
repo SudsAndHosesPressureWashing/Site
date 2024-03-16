@@ -38,9 +38,14 @@
 		gap: 1rem;
 	}
 
+	section {
+		justify-content: center;
+	}
+
 </style>
 <section class="styled-container">
 	<h1>{data.project.name}</h1>
+
 	<BeforeAfterImage project={data.project} />
 	
 	<!-- <PortableText 

@@ -53,6 +53,7 @@
         <label for="name">Name</label><input type="name" name="name" id="name"/>
         <label for="email">Email</label><input type="email" name="email" id="email"/>
         <label for="phone">Phone</label><input type="phone" name="phone" id="phone"/>
+        <label for="street-address">Address</label><input type="street-address" name="street-address" id="street-address"/>
         <label for="other">Any Other Information We Should Know?</label><textarea name="other" id="other"/>
         <input type="submit" value="Submit" />
     </fieldset>

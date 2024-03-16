@@ -1,13 +1,8 @@
 <script>
     import { urlFor } from '../lib/utils/image.ts';
-    let offset = 0
+    let value = "0"
     export let project
-    console.log(offset)
 
-    function handleMouse(e) {
-        offset = (((e.clientX-e.currentTarget.getBoundingClientRect().x)/500)*100-50)*-1
-        console.log(offset)
-    }
 </script>
 <style>
     .before {
@@ -32,7 +27,7 @@
 
 </style>
 
-<div class="beforeandafter" on:mousemove={handleMouse} on:mouseleave={e=>offset=0}>
+<div class="beforeandafter">
     <img src={urlFor(project.beforeImage).width(500).fit("crop").url()} alt="{project.shortDescription}" class="before"/>
     <img 
         src={urlFor(project.afterImage).width(500).fit("crop").url()} 
@@ -43,6 +38,7 @@
         style="--offset: {offset}%"
     />
 </div>
+<input type="range" min="0" max="150" value="75" id="slider" bind:value>
 
 <!-- {e => offset = -(e.clientX-e.currentTarget.getBoundingClientRect().x)/1}" -->
 
