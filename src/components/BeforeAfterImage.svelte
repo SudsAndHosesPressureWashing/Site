@@ -1,8 +1,6 @@
 <script>
     import { urlFor } from '../lib/utils/image.ts';
-    export let before
-    export let after
-    export let description
+    export let beforeandafterimage
     let offset=75
 </script>
 <style>
@@ -101,13 +99,15 @@
 
 
 <div class="beforeandafter">
-    <img src={urlFor(before).width(500).fit("crop").url()} alt="{description}" class="before"/>
     <img 
-        src={urlFor(after).width(500).fit("crop").url()} 
-        alt="{description}" 
+        src={urlFor(beforeandafterimage.beforeImage).width(500).fit("crop").url()} 
+        alt="{beforeandafterimage.beforeImage.caption}" 
+        class="before"
+    />
+    <img 
+        src={urlFor(beforeandafterimage.afterImage).width(500).fit("crop").url()} 
+        alt="{beforeandafterimage.afterImage.caption}" 
         class="after"
-        
-        
         style="--offset: {-offset+75}%"
     />
     <span class="beforeafter-text before-text">before</span>

@@ -1,6 +1,6 @@
 import type { PortableTextBlock } from '@portabletext/types';
 import { createClient } from '@sanity/client';
-import type { ImageAsset, Slug } from '@sanity/types';
+import type { Image, ImageAsset, Slug } from '@sanity/types';
 import imageUrlBuilding from '@sanity/image-url'
 import groq from 'groq';
 
@@ -60,7 +60,11 @@ export async function getProject(slug: String): Promise<Project> {
 			...,
 			'sections': sections[]->{
 				...
+			},
+			'mainBeforeAndAfter': mainBeforeAndAfter->{
+				...
 			}
+
 		}`,{slug}
 	)
 }
@@ -127,16 +131,22 @@ export interface ImageCluster {
 	images: Array<ImageAsset[]>
 }
 
+export interface BeforeAndAfterImage {
+	_type: 'beforeandafterimage',
+	_createdAt: string;
+	beforeImage: ImageAsset;
+	afterImage: ImageAsset
+}
+
 export interface Project {
 	_type: 'project';
 	_createdAt: string;
 	name: string;
 	slug: string;
 	includeHomePage: boolean;
-	beforeImage: ImageAsset;
-	afterImage: ImageAsset;
+	mainBeforeAndAfter: BeforeAndAfterImage;
 	shortDescription: PortableTextBlock[];
 	servicesProvided: Array<Service[]>;
-	section: Array<ImageAsset[]|TextBlock[]|ImageCluster[]>;
+	section: Array<ImageAsset[]|TextBlock[]|ImageCluster[]|BeforeAndAfterImage[]>;
 	
 }

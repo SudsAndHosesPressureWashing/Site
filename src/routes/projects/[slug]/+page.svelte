@@ -45,9 +45,7 @@
 	<h1>{data.project.name}</h1>
 
 	<BeforeAfterImage 
-		before={data.project.beforeImage} 
-		after={data.project.afterImage}
-		description={data.project.shortDescription}
+		beforeandafterimage={data.project.mainBeforeAndAfter}
 	/>
 	<!-- {#each data.project.sections as section} -->
 		<!-- {#if section._type == "textblock"} -->
