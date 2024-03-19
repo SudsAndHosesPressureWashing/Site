@@ -62,7 +62,8 @@
     }
 
     input {
-        width: 500px;
+        width: 80vw;
+        max-width: 500px;
         transform: translateY(-250px);
         display: block;
         outline-color: var(--primary);
