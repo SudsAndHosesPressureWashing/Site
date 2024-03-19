@@ -29,6 +29,7 @@
         margin-inline: auto;
         width: max-content;
         width: 80vw;
+        max-width: 500px;
     }
     input[type="range"] {
         -webkit-appearance: none;
