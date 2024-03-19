@@ -1,15 +1,19 @@
 <script>
     import { urlFor } from '../lib/utils/image.ts';
-    export let project
+    export let before
+    export let after
+    export let description
     let offset=75
 </script>
 <style>
     .before {
         top: 0;
         position: absolute;
+        width: 80vw;
     }
 
     .after {
+        width: 80vw;
         top: 0;
         position: relative;
         --offset: 0%;
@@ -24,6 +28,7 @@
         position: relative;
         margin-inline: auto;
         width: max-content;
+        width: 80vw;
     }
     input[type="range"] {
         -webkit-appearance: none;
@@ -77,9 +82,6 @@
     .after-text {
         right: 0%;
     }
-    .beforeafter-container {
-        justify-content: center;
-    }
 
     i {
         padding: 0;
@@ -97,10 +99,10 @@
 
 
 <div class="beforeandafter">
-    <img src={urlFor(project.beforeImage).width(500).fit("crop").url()} alt="{project.shortDescription}" class="before"/>
+    <img src={urlFor(before).width(500).fit("crop").url()} alt="{description}" class="before"/>
     <img 
-        src={urlFor(project.afterImage).width(500).fit("crop").url()} 
-        alt="{project.shortDescription}" 
+        src={urlFor(after).width(500).fit("crop").url()} 
+        alt="{description}" 
         class="after"
         
         

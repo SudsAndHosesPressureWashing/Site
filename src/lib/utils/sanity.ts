@@ -55,7 +55,13 @@ export async function getProjects(): Promise<Project[]> {
 
 export async function getProject(slug: String): Promise<Project> {
 	return await client.fetch(
-		groq`*[_type == "project" && slug.current == $slug][0]`,{slug}
+		groq`*[_type == "project" && slug.current == $slug][0]
+		{
+			...,
+			'sections': sections[]->{
+				...
+			}
+		}`,{slug}
 	)
 }
 
@@ -65,19 +71,6 @@ export async function getImages(): Promise<ImageAsset[]> {
 		groq`*[_type == "image"]`
 	)
 }
-
-export async function getPosts(): Promise<Post[]> {
-	return await client.fetch(
-		groq`*[_type == "post" && defined(slug.current)] | order(_createdAt desc)`
-	);
-}
-
-export async function getPost(slug: string): Promise<Post> {
-	return await client.fetch(groq`*[_type == "post" && slug.current == $slug][0]`, {
-		slug
-	});
-}
-
 
 export interface Company {
 	_type: 'company';
@@ -143,7 +136,7 @@ export interface Project {
 	beforeImage: ImageAsset;
 	afterImage: ImageAsset;
 	shortDescription: PortableTextBlock[];
-	servicesProvides: Array<Service[]>;
+	servicesProvided: Array<Service[]>;
 	section: Array<ImageAsset[]|TextBlock[]|ImageCluster[]>;
 	
 }
