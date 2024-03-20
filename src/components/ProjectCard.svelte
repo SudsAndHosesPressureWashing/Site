@@ -88,8 +88,8 @@
     <section>
         <h3 >{ project.name }</h3>
         <div class="beforeandafter">
-            <img src={urlFor(project.beforeImage).width(200).fit("crop").url()} alt="{project.shortDescription}" class="before"/>
-            <img src={urlFor(project.afterImage).width(200).fit("crop").url()} alt="{project.shortDescription}" class="after"/>
+            <img src={urlFor(project.mainBeforeAndAfter.beforeImage).width(200).fit("crop").url()} alt="{project.mainBeforeAndAfter.beforeImage.caption}" class="before"/>
+            <img src={urlFor(project.mainBeforeAndAfter.afterImage).width(200).fit("crop").url()} alt="{project.mainBeforeAndAfter.afterImage.caption}" class="after"/>
         </div>
         <p>{ project.shortDescription}</p>
     </section>

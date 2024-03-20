@@ -189,7 +189,7 @@
         {/if}
     {/each}
 </section>
-<section class="styled-container projects">
+<!-- <section class="styled-container projects">
     <h2>Our Previous Projects</h2>
     <div class="projects-container">
         {#each data.projects as project}
@@ -198,7 +198,7 @@
             {/if}
         {/each}
     </div>
-</section>
+</section> -->
 <a href="/getaquote">
     <section class="quote">
         <img src="{powerwash}" alt="Get A Free Quote" />
