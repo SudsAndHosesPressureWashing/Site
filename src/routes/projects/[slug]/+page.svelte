@@ -9,6 +9,7 @@
 	export let data;
 	console.log(data)
 </script>
+
 <style>
 	* {
 		color: white;
@@ -46,6 +47,12 @@
 	}
 
 </style>
+
+<svelte:head>
+    <title>{data.project.name}</title>
+    <meta name="description" content="{data.project.name}" />
+</svelte:head>
+
 <section class="styled-container">
 	<h1>{data.project.name}</h1>
 

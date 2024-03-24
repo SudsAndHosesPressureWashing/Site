@@ -171,6 +171,11 @@
     }
 </style>
 
+<svelte:head>
+    <title>Welcome to Suds and Hoses Pressure Washing!</title>
+    <meta name="description" content="Suds and Hoses is a pressure and softwashing company in Mooresville that is owned and operated by a firefighter." />
+</svelte:head>
+
 <section class="intro styled-container ">
 	<h1 class="main-title">Welcome to {data.company.name}</h1>
 	<p>{data.company.excerpt}</p>

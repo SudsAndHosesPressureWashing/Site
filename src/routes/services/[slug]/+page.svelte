@@ -5,6 +5,7 @@
 	import Step from '../../../components/Step.svelte';
 	export let data;
 </script>
+
 <style>
 	* {
 		color: white;
@@ -32,6 +33,12 @@
 		gap: 1rem;
 	}
 </style>
+
+<svelte:head>
+    <title>{data.name}</title>
+    <meta name="description" content="{data.shortDescription}" />
+</svelte:head>
+
 <section class="styled-container">
 	<h1>{data.name}</h1>
 	<img src={urlFor(data.mainImage).width(500).fit("crop").url()} alt="{data.shortDescription}"/>
