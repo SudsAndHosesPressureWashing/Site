@@ -1,7 +1,11 @@
 <script>
 	/** @type {import('./$types').PageData} */
-	import {PortableText} from '@portabletext/svelte'
+	import { PortableText } from '@portabletext/svelte';
+	import { getComponent } from '$lib/utils/componentpicker';
 	import BeforeAfterImage from '../../../components/BeforeAfterImage.svelte';
+	import ImageCluster from '../../../components/ImageCluster.svelte';
+	import { text } from '@sveltejs/kit';
+	import BeforeAndAfter from '../../../components/BeforeAndAfter.svelte';
 	export let data;
 	console.log(data)
 </script>
@@ -38,6 +42,7 @@
 
 	section {
 		justify-content: center;
+		padding: 2rem;
 	}
 
 </style>
@@ -47,10 +52,16 @@
 	<BeforeAfterImage 
 		beforeandafterimage={data.project.mainBeforeAndAfter}
 	/>
-	<!-- {#each data.project.sections as section} -->
-		<!-- {#if section._type == "textblock"} -->
-		<!-- <PortableText value={section.body} /> -->
-		<!-- {section.body} -->
-		<!-- {/if} -->
-	<!-- {/each} -->
+	{#each data.project.sections as section} 
+		{#if section._type == "blockdocument"}
+			
+			<PortableText value={section.longDescription} />
+
+		{:else if section._type=="beforeandafterimage"}
+			<BeforeAfterImage beforeandafterimage={section} />
+		{:else if section._type=="imagecluster"}
+			<ImageCluster imagecluster={section}/>
+		{/if}
+
+	{/each} 
 </section>

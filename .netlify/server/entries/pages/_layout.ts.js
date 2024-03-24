@@ -4,7 +4,6 @@ const load = async () => {
   const company = await getCompany();
   const socials = await getSocials();
   const images = await getImages();
-  console.log(images);
   if (company && socials) {
     return {
       "company": company[0],

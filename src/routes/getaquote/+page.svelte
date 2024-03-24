@@ -37,6 +37,18 @@
         border: white 1px solid;
         text-decoration: underline;
     }
+
+    .citystate {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .citystate > div {
+        width: 50%;
+        display: inline;
+        text-align: right;
+        margin: 0.5rem;
+    }
 </style>
 <form class="styled-container" method="post" name="quote" data-netlify="true" action="https://formsubmit.co/c41680c9166ee9328c4cdbf17b88ad0d">
     <input type="hidden" name="_next" value="https://main--sudsandhosestestsite.netlify.app/ThankYou">
@@ -54,6 +66,11 @@
         <label for="email">Email</label><input type="email" name="email" id="email"/>
         <label for="phone">Phone</label><input type="phone" name="phone" id="phone"/>
         <label for="street-address">Address</label><input type="street-address" name="street-address" id="street-address"/>
+        <div class="citystate">
+            <div><label for="city">City</label><input type="city" name="city" id="city"/></div>
+            <div><label for="state">State</label><input type="state" name="state" id="state"/></div>
+        </div>
+        
         <label for="other">Any Other Information We Should Know?</label><textarea name="other" id="other"/>
         <input type="submit" value="Submit" />
     </fieldset>

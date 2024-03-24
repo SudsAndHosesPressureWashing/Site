@@ -1,8 +1,6 @@
 <script>
     import { urlFor } from '../lib/utils/image.ts';
     export let service
-    console.log(service)
-
     let opts = {prefetch: false}
 </script>
 <style>

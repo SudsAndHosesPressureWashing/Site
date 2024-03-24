@@ -49,7 +49,12 @@ export async function getService(slug: String): Promise<Service> {
 
 export async function getProjects(): Promise<Project[]> {
 	return await client.fetch(
-		groq`*[_type == "project"]`
+		groq`*[_type == "project"]{
+			name,
+			includeHomePage,
+			slug,
+			'mainBeforeAndAfter': mainBeforeAndAfter->{...}
+		}`
 	)
 }
 
@@ -58,7 +63,7 @@ export async function getProject(slug: String): Promise<Project> {
 		groq`*[_type == "project" && slug.current == $slug][0]
 		{
 			...,
-			'sections': sections[]->{
+			'sections': section[]->{
 				...
 			},
 			'mainBeforeAndAfter': mainBeforeAndAfter->{
