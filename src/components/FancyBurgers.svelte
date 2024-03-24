@@ -63,7 +63,10 @@
         height: max-content;
     }
 </style>
-  <button on:click={()=>(active = !active)} >
+  <button on:click={()=>(active = !active)} 
+    aria-label="Open the Navigtion"
+    aria-expanded={active}
+    >
   <svg class="ham ham3 {active?'active':''}" viewBox="0 0 100 100" width="40" >
     <path
           class="line top"

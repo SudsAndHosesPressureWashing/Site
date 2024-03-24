@@ -2,6 +2,7 @@
     import { urlFor } from "$lib/utils/image"
     export let socials
 </script>
+
 <style>
     footer {
         text-align: center;
@@ -39,18 +40,18 @@
     }
 
 </style>
-<footer>
+
+<footer aria-label="Footer">
     Reach Out
     <div class="socials">
     {#each socials as social}
-    <a href="{social.url.current}">
-        <div class="social__card">
-            <img src="{urlFor(social.logo).width(40)}" alt="{social.name}" />
-            <span>{social.name}</span>
-            
-        </div>
-    </a>
-    
+        <a href="{social.url.current}">
+            <div class="social__card">
+                <img src="{urlFor(social.logo).width(40)}" alt="{social.name} Logo" />
+                <span>{social.name}</span>
+                
+            </div>
+        </a>
     {/each}
     </div>
 </footer>

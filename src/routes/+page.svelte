@@ -207,7 +207,7 @@
 </section>
 <a href="/getaquote">
     <section class="quote">
-        <img src="{powerwash}" alt="Get A Free Quote" />
+        <img src="{powerwash}" alt="A Power Wash Wand" />
         <h2>Get A Free Quote</h2>
     </section>
 </a>

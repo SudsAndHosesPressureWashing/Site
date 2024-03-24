@@ -9,6 +9,7 @@
         active = !active;
     }
 </script>
+
 <style>
 
     * {
@@ -102,10 +103,11 @@
 
 	}
 </style>
+
 <header>
     <div class="nav-container">
         <a href="/"><img src={urlFor(companyData.logo).width(200).url()} alt="Logo"/></a>
-        <nav class="{active? 'show-nav':'hide-nav'}">
+        <nav class="{active? 'show-nav':'hide-nav'}" aria-label="Main">
             <ul>
                 <!-- <li><a href="/AboutUs">About Us</a></li> -->
                 <!-- <li><a href="/FAQ">Frequently Asked Questions</a></li> -->
