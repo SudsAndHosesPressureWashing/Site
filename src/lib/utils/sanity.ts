@@ -19,7 +19,13 @@ export const client = createClient({
 
 export async function getCompany(): Promise<Company> {
 	return await client.fetch(
-		groq`*[_type == "company"]`
+		groq`*[_type == "company"][0]
+		{
+			...,
+			'aboutus': aboutus[]->{
+			  ...
+			}
+		  }`
 	);
 }
 

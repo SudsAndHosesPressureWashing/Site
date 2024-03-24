@@ -1,8 +1,9 @@
 <script>
-	import { urlFor } from '$lib/utils/image.ts';
+    import { urlFor } from '$lib/utils/image.ts';
     import Hamburger from './Hamburger.svelte';
     import FancyBurgers from './FancyBurgers.svelte';
     export let companyData;
+
     let active=false;
 
     function switchOpen() {
@@ -109,7 +110,7 @@
         <a href="/"><img src={urlFor(companyData.logo).width(200).url()} alt="Logo"/></a>
         <nav class="{active? 'show-nav':'hide-nav'}" aria-label="Main">
             <ul>
-                <!-- <li><a href="/AboutUs">About Us</a></li> -->
+                <li><a href="/aboutus">About Us</a></li>
                 <!-- <li><a href="/FAQ">Frequently Asked Questions</a></li> -->
                 <li><a href="/services">Services</a></li>
                 <li><a href="/projects">Projects</a></li>

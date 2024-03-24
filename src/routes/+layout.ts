@@ -9,7 +9,7 @@ export const load = (async () => {
 	const socials = await getSocials();
 	if (company && socials) {
 		return {
-			'company':company[0],
+			'company':company,
 			socials
 		};
 	}

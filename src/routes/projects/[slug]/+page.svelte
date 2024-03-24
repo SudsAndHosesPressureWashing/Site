@@ -1,13 +1,9 @@
 <script>
 	/** @type {import('./$types').PageData} */
 	import { PortableText } from '@portabletext/svelte';
-	import { getComponent } from '$lib/utils/componentpicker';
 	import BeforeAfterImage from '../../../components/BeforeAfterImage.svelte';
 	import ImageCluster from '../../../components/ImageCluster.svelte';
-	import { text } from '@sveltejs/kit';
-	import BeforeAndAfter from '../../../components/BeforeAndAfter.svelte';
 	export let data;
-	console.log(data)
 </script>
 
 <style>
