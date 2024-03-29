@@ -40,6 +40,12 @@ export async function GET() {
             <url>
                 <loc>https://sudsandhosespressurewashing.com/services/projects</loc>
             </url>
+            <url>
+                <loc>https://sudsandhosespressurewashing.com/services/aboutus</loc>
+            </url>
+            <url>
+                <loc>https://sudsandhosespressurewashing.com/services/faq</loc>
+            </url>
 		</urlset>`.trim(),
 		{
 			headers: {

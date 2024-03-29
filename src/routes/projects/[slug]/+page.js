@@ -3,9 +3,8 @@ import { getProject } from '$lib/utils/sanity';
 
 /** @type {import('./$types').PageLoad} */
 
-export function load({ params }) {
-	let project = getProject(params.slug)
-    
+export async function load({ params }) {
+	let project = await getProject(params.slug)
     if (project) {
         return {"project":project}
     }

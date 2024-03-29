@@ -12,9 +12,7 @@
 <section class="styled-container">
 	{#each data.company.aboutus as section} 
 		{#if section._type == "blockdocument"}
-			
 			<PortableText value={section.longDescription} />
-
 		{:else if section._type=="beforeandafterimage"}
 			<BeforeAfterImage beforeandafterimage={section} />
 		{:else if section._type=="imagecluster"}

@@ -54,7 +54,7 @@ export async function getService(slug: String): Promise<Service> {
 }
 
 export async function getProjects(): Promise<Project[]> {
-	return await client.fetch(
+	return client.fetch(
 		groq`*[_type == "project"]{
 			name,
 			includeHomePage,
