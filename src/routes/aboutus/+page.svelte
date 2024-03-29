@@ -2,7 +2,6 @@
     import { PortableText } from '@portabletext/svelte';
     import ImageCluster from '../../components/ImageCluster.svelte';
     export let data;
-    console.log(data.company.aboutus)
 </script>
 <style>
     .styled-container {

@@ -29,6 +29,12 @@ export async function getCompany(): Promise<Company> {
 	);
 }
 
+export async function getFAQs(): Promise<FAQ[]> {
+	return await client.fetch(
+		groq`*[_type == "questionandanswer"]`
+	)
+}
+
 export async function getSocials(): Promise<Social[]> {
 	return await client.fetch(
 		groq`*[_type == "social"]`
@@ -85,6 +91,14 @@ export async function getImages(): Promise<ImageAsset[]> {
 	return await client.fetch(
 		groq`*[_type == "image"]`
 	)
+}
+
+
+export interface FAQ {
+	_type: 'questionandanswer';
+	_createdAt: string;
+	question: string;
+	answer: Text; 
 }
 
 export interface Company {

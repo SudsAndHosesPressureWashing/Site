@@ -111,7 +111,7 @@
         <nav class="{active? 'show-nav':'hide-nav'}" aria-label="Main">
             <ul>
                 <li><a href="/aboutus">About Us</a></li>
-                <!-- <li><a href="/FAQ">Frequently Asked Questions</a></li> -->
+                <li><a href="/faq">Frequently Asked Questions</a></li>
                 <li><a href="/services">Services</a></li>
                 <li><a href="/projects">Projects</a></li>
                 <li><a href="/getaquote">Get A Free Quote</a></li>

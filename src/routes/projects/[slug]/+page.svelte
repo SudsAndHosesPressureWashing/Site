@@ -39,7 +39,6 @@
 
 	section {
 		justify-content: center;
-		padding: 2rem;
 	}
 
 </style>
