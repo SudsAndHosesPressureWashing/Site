@@ -2,7 +2,6 @@
 	/** @type {import('./$types').PageData} */
     import { PortableText } from '@portabletext/svelte';
 	export let data;
-    console.log(data)
 </script>
 
 <section class="styled-container">

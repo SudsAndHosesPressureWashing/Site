@@ -6,7 +6,6 @@
 	import { each } from 'svelte/internal';
     import powerwash from '$lib/images/powerwash.svg'
 	export let data: PageData;
-    console.log(data)
 </script>
 
 <style>
