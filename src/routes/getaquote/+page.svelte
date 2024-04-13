@@ -56,7 +56,7 @@
     <meta name="description" content="Select the services you'd like quoted, fill in your information, and we'll reach out to you soon!" />
 </svelte:head>
 
-<form class="styled-container" method="post" name="quote" data-netlify="true" action="https://formsubmit.co/sudsandhosesllc@gmail.com">
+<form class="styled-container" method="post" name="quote" data-netlify="true" action="https://formsubmit.co/0eeaa040ac252dc3efdbcb81c318af89">
     <input type="hidden" name="_next" value="https://sudsandhosespressurewashing.com/ThankYou">
     <input type="hidden" name="_subject" value="New Quote Request">
     <input type="text" name="_honey" style="display:none">
