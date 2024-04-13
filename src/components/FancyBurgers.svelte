@@ -21,18 +21,6 @@
     stroke-linecap:round;
     }
     
-    .ham2 .top {
-    stroke-dasharray: 40 121;
-    }
-    .ham2 .bottom {
-    stroke-dasharray: 40 121;
-    }
-    .ham2.active .top {
-    stroke-dashoffset: -102px;
-    }
-    .ham2.active .bottom {
-    stroke-dashoffset: -102px;
-    }
     .ham3 .top {
     stroke-dasharray: 40 130;
     }

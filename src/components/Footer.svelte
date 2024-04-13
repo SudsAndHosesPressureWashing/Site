@@ -11,7 +11,7 @@
         padding: 0;
         background-color: var(--bg-color);
         backdrop-filter: var(--backdrop-filter);
-        width: 15rem;
+        width: 20rem;
         margin-bottom: 0vh;
         /* border-radius: 10px 10px 0 0; */
     }
@@ -35,8 +35,13 @@
         
     }
     span {
-        font-size: 0.8;
+        font-size: 0.8rem;
         color: white;
+    }
+
+    i {
+        font-size: 0.6rem;
+        margin: 0;
     }
 
 </style>
@@ -54,4 +59,5 @@
         </a>
     {/each}
     </div>
+    <i>© 2024 Suds And Hoses Power Washing, LLC, Rights Reserved</i>
 </footer>
