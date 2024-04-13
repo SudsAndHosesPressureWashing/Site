@@ -82,6 +82,9 @@
     }
 
     @media (max-width: 680px) {
+        * {
+            margin: 0;
+        }
         header {
             flex-direction: column;
         }
@@ -92,10 +95,7 @@
         .hamburger {
             display: flex;
             justify-content: center;
-            margin: 1rem;
-            /* width: 3rem;
-            margin-block: auto;
-            transform: translateY(calc( -50vw + 50%)); */
+            margin: 0.5rem;
         }
 
         .hide-nav {

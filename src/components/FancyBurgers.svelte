@@ -46,7 +46,7 @@
         border: white 2px solid;
         border-radius: 4px;
         padding: 0;
-        margin: 1rem;
+        margin: 0.5rem;
         width: max-content;
         height: max-content;
     }
