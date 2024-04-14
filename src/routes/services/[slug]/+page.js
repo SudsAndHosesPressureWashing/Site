@@ -3,7 +3,7 @@ import { getService } from '$lib/utils/sanity';
 
 /** @type {import('./$types').PageLoad} */
 
-export function load({ params }) {
+export async function load({ params }) {
 	let service = getService(params.slug)
     
     if (service) {

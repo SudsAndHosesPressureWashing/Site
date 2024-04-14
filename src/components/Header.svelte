@@ -1,7 +1,7 @@
 <script>
     import { urlFor } from '$lib/utils/image.ts';
-    import Hamburger from './Hamburger.svelte';
     import FancyBurgers from './FancyBurgers.svelte';
+	import { afterNavigate } from '$app/navigation';
     export let companyData;
 
     let active=false;
@@ -9,6 +9,11 @@
     function switchOpen() {
         active = !active;
     }
+
+    afterNavigate(()=>{
+        active=false
+    })
+
 </script>
 
 <style>
@@ -121,7 +126,6 @@
     </div>
     <div class="hamburger">
         <FancyBurgers bind:active />
-    <!-- <div class="{open? 'hamburger-open':'hamburger'}" on:click={()=>(open = !open)} on:keydown={()=>(open = !open)}>{open? 'x':'III'}</div> -->
     </div>
 </header>
 

@@ -3,7 +3,6 @@
 	import ServicesMarker from '../components/ServicesMarker.svelte';
     import ServiceCard from '../components/ServiceCard.svelte'
     import ProjectCard from '../components/ProjectCard.svelte';
-	import { each } from 'svelte/internal';
     import powerwash from '$lib/images/powerwash.svg'
 	export let data: PageData;
 </script>

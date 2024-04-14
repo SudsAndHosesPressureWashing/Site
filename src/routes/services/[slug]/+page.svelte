@@ -43,10 +43,9 @@
 	<h1>{data.name}</h1>
 	<img src={urlFor(data.mainImage).width(500).fit("crop").url()} alt="{data.shortDescription}"/>
 	<PortableText 
+		onMissingComponent={false}
 		value={data.longDescription}
 	/>
-	
-	<!-- <div>{@html data.longDescription}</div> -->
 </section>
 {#if data.steps}
 <section class="styled-container">

@@ -15,26 +15,8 @@
 		text-align: center;
 	}
 
-	h2 {
-		text-align: center;
-	}
-
-	img {
-		margin-inline: auto;
-		display: block;
-		margin-block: 1rem;
-		box-shadow: 10px 10px rgba(255, 255, 255, 0.4);
-	}
-
 	section {
 		padding: 1rem;
-	}
-
-	.steps-container {
-		display: flex;
-		justify-content: space-around;
-		flex-wrap: wrap;
-		gap: 1rem;
 	}
 
 	section {
@@ -57,7 +39,7 @@
 	{#each data.project.sections as section} 
 		{#if section._type == "blockdocument"}
 			
-			<PortableText value={section.longDescription} />
+			<PortableText onMissingComponent={false} value={section.longDescription} />
 
 		{:else if section._type=="beforeandafterimage"}
 			<BeforeAfterImage beforeandafterimage={section} />
