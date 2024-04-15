@@ -7,45 +7,55 @@ main {
 
 [data-theme="light"],
 :root:not([data-theme="dark"]) {
-  --primary: #000;
-  --primary-pico: #D62F3E;
-  --primary-focus: rgba(216, 27, 96, 0.125);
+  --suds-and-hoses-red: #D62F3E;
+  --primary:white;
+  --primary-hover:var(--suds-and-hoses-red);
+  --primary-pico: white;
+  --pico-primary-hover-underline: var(--suds-and-hoses-red);
+  --pico-primary-underline:var(--suds-and-hoses-red);
+  --pico-underline: white;
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --pico-primary: #D62F3E;
+  --pico-color: white;
   --primary-inverse: #FFF;
-  --nav-background: rgb(245, 245, 245);
-  --green: rgb(74, 165, 123);
 }
 
 @media only screen and (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --primary: #fff;
-    --primary-hover: #D62F3E;
-    --primary-pico: #D62F3E;
-    --primary-focus: rgba(216, 27, 96, 0.25);
-    --primary-inverse: #000;
-    --nav-background: #11191f;
-    --green: green;
+    --suds-and-hoses-red: #D62F3E;
+    --primary:var(--suds-and-hoses-red);
+    --primary-hover:var(--suds-and-hoses-red);
+    --primary-pico: white;
+    --pico-primary-hover-underline: var(--suds-and-hoses-red);
+    --pico-primary-underline:var(--suds-and-hoses-red);
+    --pico-underline: white;
+    --form-element-active-border-color: var(--primary);
+    --form-element-focus-color: var(--primary-focus);
+    --pico-primary: #D62F3E;
+    --pico-color: white;
+    --primary-inverse: #FFF;
   }
 }
 
 [data-theme="dark"] {
-  --primary: #d81b60;
-  --primary-hover: #d81b60;
-  
-  --primary-focus: rgba(216, 27, 96, 0.25);
+  --suds-and-hoses-red: #D62F3E;
+  --primary:var(--suds-and-hoses-red);
+  --primary-hover:var(--suds-and-hoses-red);
+  --primary-pico: white;
+  --pico-primary-hover-underline: var(--suds-and-hoses-red);
+  --pico-primary-underline:var(--suds-and-hoses-red);
+  --pico-underline: white;
+  --form-element-active-border-color: var(--primary);
+  --form-element-focus-color: var(--primary-focus);
+  --pico-primary: #D62F3E;
+  --pico-color: white;
   --primary-inverse: #FFF;
 }
 
 :root {
-  --primary: #D62F3E;
-  --primary-hover: #D62F3E;
-  --primary-pico: #D62F3E;
-  --pico-primary-hover-underline: #D62F3E;
-  --pico-underline: white;
-  --form-element-active-border-color: var(--primary);
-  --form-element-focus-color: var(--primary-focus);
   --switch-color: var(--primary-inverse);
   --switch-checked-background-color: var(--primary);
-
   --backdrop-filter: blur(10px);         
   --bg-color: rgba(50,50,50,0.8);
   --mobile-break: 640px;
