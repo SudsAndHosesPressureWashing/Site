@@ -3,7 +3,9 @@
     export let data;
 </script>
 <style>
-
+    * {
+        color: white;
+    }
     .services-container {
         display: flex;
         flex-wrap: wrap;

@@ -113,7 +113,7 @@
     <span class="beforeafter-text before-text">before</span>
     <span class="beforeafter-text after-text">after</span>
     <input type="range" min="0" max="150" id="slider" bind:value = {offset} />
-    <i>Drag the Image Back and Forth to See the The Before and After!</i>
+    <i>Click on the image to see more of the before or after!</i>
 </div>
 
 
