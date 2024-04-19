@@ -52,6 +52,40 @@
     .cards-container {
         display: none;
     }
+    
+    @supports not ( animation-timeline: view() ) {
+        .services {
+            margin-block: 50px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 1rem;
+            animation: none;
+            opacity: 1;
+            height: auto;
+            border-radius: 0;
+            background-color: var(--bg-color);
+            backdrop-filter: var(--backdrop-filter);
+            box-shadow: 10px 15px color-mix(in srgb, var(--primary-hover) 70%, transparent);
+        }
+
+        .services > h2 {
+            position: inherit;
+            width: 100%;
+            background-color: rgba(0,0,0,0);
+            backdrop-filter: none;
+            box-shadow: none;
+        }
+
+        .markers-container {
+            display: none;
+        }
+
+        .cards-container {
+            display: inline-block;
+        }
+    }
 
     @media (max-width: 680px) {
         .services {
