@@ -72,7 +72,7 @@
     <fieldset>
         <label for="name">Name</label><input type="name" name="name" id="name"/>
         <label for="email">Email</label><input type="email" name="email" id="email"/>
-        <label for="phone">Phone</label><input type="phone" name="phone" id="phone"/>
+        <label for="tel">Phone</label><input type="tel" name="tel" id="tel"/>
         <label for="street-address">Address</label><input type="street-address" name="street-address" id="street-address"/>
         <div class="citystate">
             <div><label for="city">City</label><input type="city" name="city" id="city"/></div>
