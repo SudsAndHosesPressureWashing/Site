@@ -12,11 +12,12 @@ main {
   --primary-hover:var(--suds-and-hoses-red);
   --primary-pico: white;
   --pico-primary-hover-underline: var(--suds-and-hoses-red);
+  --pico-primary-hover: var(--suds-and-hoses-red);
   --pico-primary-underline:var(--suds-and-hoses-red);
   --pico-underline: white;
   --form-element-active-border-color: var(--primary);
   --form-element-focus-color: var(--primary-focus);
-  --pico-primary: #D62F3E;
+  --pico-primary: white;
   --pico-color: white;
   --primary-inverse: #FFF;
 }
@@ -25,15 +26,15 @@ main {
   :root:not([data-theme="light"]) {
     --suds-and-hoses-red: #D62F3E;
     --primary:var(--suds-and-hoses-red);
-    --primary-hover:var(--suds-and-hoses-red);
     --primary-pico: white;
+    --pico-primary-hover: var(--suds-and-hoses-red);
     --pico-primary-hover-underline: var(--suds-and-hoses-red);
     --pico-primary-underline:var(--suds-and-hoses-red);
     --pico-underline: white;
     --form-element-active-border-color: var(--primary);
     --form-element-focus-color: var(--primary-focus);
-    --pico-primary: #D62F3E;
     --pico-color: white;
+    --pico-primary: white;
     --primary-inverse: #FFF;
   }
 }
@@ -50,7 +51,12 @@ main {
   --form-element-focus-color: var(--primary-focus);
   --pico-primary: #D62F3E;
   --pico-color: white;
+  --pico-primary: white;
   --primary-inverse: #FFF;
+}
+
+*:focus {
+  outline: 1px var(--suds-and-hoses-red);
 }
 
 :root {
