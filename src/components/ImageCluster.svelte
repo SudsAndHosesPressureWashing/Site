@@ -2,6 +2,7 @@
 <script>
     import { urlFor } from "$lib/utils/image";
     export let imagecluster
+    console.log(imagecluster)
 </script>
 <style>
 /* .grid {
@@ -44,9 +45,6 @@ img:hover {
     transform: scale(1.2);
     z-index: 9999;
 }
-
-
-
 
 </style>
 <div class="cluster">

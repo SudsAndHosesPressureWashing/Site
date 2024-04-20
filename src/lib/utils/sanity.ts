@@ -89,7 +89,10 @@ export async function getProject(slug: String): Promise<Project> {
 
 export async function getImages(): Promise<ImageAsset[]> {
 	return await client.fetch(
-		groq`*[_type == "image"]`
+		// groq`*[defined(mimeType)]`
+		groq`*[_type in ["sanity.imageAsset", "sanity.fileAsset"]]
+		{..., "refs": count(*[references(^._id)])}
+		[refs > 0]`
 	)
 }
 
