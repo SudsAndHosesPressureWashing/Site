@@ -35,8 +35,6 @@
 </svelte:head>
 <section class="styled-container grid">
     {#each data.images as image}
-        {#if !image.metadata.hasAlpha}
-            <img src="{urlFor(image).width(250)}" alt="Our Gallery">
-        {/if}
+        <img src="{urlFor(image).width(250)}" alt="Our Gallery">
     {/each}
 </section>

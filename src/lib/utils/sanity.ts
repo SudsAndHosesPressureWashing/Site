@@ -90,7 +90,7 @@ export async function getProject(slug: String): Promise<Project> {
 export async function getImages(): Promise<ImageAsset[]> {
 	return await client.fetch(
 		// groq`*[defined(mimeType)]`
-		groq`*[_type in ["sanity.imageAsset", "sanity.fileAsset"]]
+		groq`*[_type in ["sanity.imageAsset", "sanity.fileAsset"] && !(originalFilename match ["favicon.png"]) && !(metadata.hasAlpha)]
 		{..., "refs": count(*[references(^._id)])}
 		[refs > 0]`
 	)
